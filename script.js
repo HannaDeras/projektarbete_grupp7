@@ -99,7 +99,7 @@ const query2022 = {
     "response": {
       "format": "JSON"
     }
-  }
+  };
 
   const request2022 = new Request (urlSCB, {
     method: "POST",
