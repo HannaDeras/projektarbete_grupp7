@@ -61,8 +61,6 @@ const querySCB = {
 });
 
 
-
-
 //Hämtar data på hur många som åkte personbil i alla län år 2022
 const url2022 = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik";
 
