@@ -48,11 +48,13 @@ const querySCB = {
   }
 
   function printSCBChart(dataSCB){
+    console.log(dataSCB)
     const years = dataSCB.data;
-    const labels = years.map((year) => year.key[1]);
+    const labels = years.map((year) => year.key[2]);
     console.log(labels);  
     const data = years.map((year) => year.values[0]);
     console.log(data);  
+    console.log(years);
 
 
   const datasets = [
@@ -126,7 +128,7 @@ const query2022 = {
 
   function printSCBChart2(dataSCB2022){
     const years = dataSCB2022.data;
-    const labels = years.map((year) => year.key[1]);
+    const labels = years.map((year) => year.key[2]);
     console.log(labels);  
     const data = years.map((year) => year.values[0]);
     console.log(data);  
@@ -201,6 +203,32 @@ const query2012 = {
       "format": "JSON"
     }
   }
+
+  function printSCBChart3(dataSCB2012){
+    const years = dataSCB2012.data;
+    const labels = years.map((year) => year.key[2]);
+    console.log(labels);  
+    const data = years.map((year) => year.values[0]);
+    console.log(data);  
+
+    const datasets = [
+      {
+        label: "Antal personbilar i alla län i Sverige år 2012",
+        data,
+        fill: false,
+        borderWidth: 1,
+        borderColor: "hsla(250, 100%, 30%, 1)",
+        hoverBorderWidth: 4,
+        tension: 0.5,
+        barThickness: 50
+      }];
+
+      new Chart(document.getElementById("myChart3"), {
+        type: "bar",
+        data: {labels, datasets}
+    
+      });
+    }
   
 
   const request2012 = new Request (urlSCB, {
@@ -210,10 +238,7 @@ const query2012 = {
 
   fetch (request2012)
   .then((response) => response.json())
-  .then((persdata2) => {
-    console.log(persdata2);
-
-}); 
+  .then(printSCBChart3);
 
 
 //Hämtar data på kolioxid för personbil mellan åren 2012 -2022
@@ -278,6 +303,25 @@ const querykol = {
       }
   }
   
+  function printSCBChart4(dataSCBkol){
+    const years = dataSCBkol.data;
+    const labels = years.map((year) => year.key[2]);
+    console.log(labels);  
+    const data = years.map((year) => year.values[0]);
+    console.log(data); 
+
+    const datasets = [
+      {
+        label: "",
+        data,
+        fill: false,
+        borderWidth: 1,
+        borderColor: "hsla(250, 100%, 30%, 1)",
+        hoverBorderWidth: 4,
+        tension: 0.5,
+        barThickness: 50
+      }];
+
 
 
 const requestkol = new Request (urlkol, {
@@ -291,6 +335,9 @@ fetch (requestkol)
   console.log(koldata);
 
 });
+
+
+
 
 
 

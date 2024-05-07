@@ -14,21 +14,38 @@
     <div class="navabar" >
     </div>
     <ul class="nav-links" >
-        <li><a href="#">Graf 1</a></li>
-        <li><a href="#">Graf 2</a></li>
+      <div class ="btn-1">
+        <li><a href="#section1">Graf 1</a></li>
+      </div>
+      <div class ="btn-2">
+        <li><a href="#section2">Graf 2</a></li>
+      </div>
         <li><a href="#">Graf 3</a></li>
         <li><a href="#">Graf 4</a></li>
         <li><a href="#">Dagens problem</a></li>
         <li><a href="#">Footer</a></li>
     </ul>
 </nav>
-<h2>Trender i personbilstrafik och koldioxidutsläpp: En analys av åren 2012-2022</h2>
+<h2>Trender i antal personbilar och koldioxidutsläpp: En analys av åren 2012-2022</h2>
+<div class="chart1" id = "section1">
   <div class="myChart-container" style= "float:left; display:inline; margin-right: 100px;  height:700px; width:600px"> <h3>Graf 1</h3>
     <canvas id= "myChart"> </canvas>
   </div>
+</div>
+<div class="chart2" id = "section2">
   <div class="myChart2-container" style="float:left; display:inline;  height:700px; width:600px"> <h3>Graf 2</h3>
     <canvas id= "myChart2"> </canvas>
   </div>
+</div>
+<div class="chart3" id = "section3">
+  <div class="myChart3-container" style="float:left; display:inline;  height:700px; width:600px"> <h3>Graf 3</h3>
+    <canvas id= "myChart3"> </canvas>
+  </div>
+  <div class="chart4" id = "section4">
+    <div class="myChart4-container" style="float:left; display:inline;  height:700px; width:600px"> <h3>Graf 4</h3>
+      <canvas id= "myChart4"> </canvas>
+    </div>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
