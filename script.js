@@ -47,6 +47,34 @@ const querySCB = {
     }
   }
 
+  function printSCBChart(dataSCB){
+    const years = dataSCB.data;
+    const labels = years.map((year) => year.key[1]);
+    console.log(labels);  
+    const data = years.map((year) => year.values[0]);
+    console.log(data);  
+
+  
+
+  const datasets = [
+    {
+      label: "Antal personbilar i alla län i Sverige mellan år 2012-2022",
+      data,
+      fill: false,
+      borderWidth: 2,
+      borderColor: "hsla(250, 100%, 30%, 1)",
+      hoverBorderWidth: 4,
+      tension: 0.5
+      
+    }];
+
+
+  new Chart(document.getElementById("myChart"), {
+    type: "line",
+    data: {labels, datasets}
+
+  });
+}
 
   const request = new Request (urlSCB, {
     method: "POST",
@@ -55,10 +83,8 @@ const querySCB = {
 
   fetch (request)
   .then((response) => response.json())
-  .then((scbdata) => {
-    console.log(scbdata);
+  .then(printSCBChart);
 
-});
 
 
 //Hämtar data på hur många som åkte personbil i alla län år 2022
@@ -99,6 +125,34 @@ const query2022 = {
     }
   };
 
+  function printSCBChart2(dataSCB2022){
+    const years = dataSCB2022.data;
+    const labels = years.map((year) => year.key[1]);
+    console.log(labels);  
+    const data = years.map((year) => year.values[0]);
+    console.log(data);  
+
+    const datasets = [
+      {
+        label: "Antal personbilar i alla län i Sverige år 2022",
+        data,
+        fill: false,
+        borderWidth: 2,
+        borderColor: "hsla(250, 100%, 30%, 1)",
+        hoverBorderWidth: 4,
+        tension: 0.5
+        
+      }];
+
+      new Chart(document.getElementById("myChart2"), {
+        type: "bar",
+        data: {labels, datasets}
+    
+      });
+    }
+
+
+
   const request2022 = new Request (urlSCB, {
     method: "POST",
     body: JSON.stringify(query2022)
@@ -106,10 +160,8 @@ const query2022 = {
 
   fetch (request2022)
   .then((response) => response.json())
-  .then((persdata) => {
-    console.log(persdata);
+  .then(printSCBChart2);
 
-}); 
 
 //Hämtar data på hur många som åkte personbil i alla län år 2012
 
@@ -150,6 +202,18 @@ const query2012 = {
     }
   }
 
+  const request2012 = new Request (urlSCB, {
+    method: "POST",
+    body: JSON.stringify(query2012)
+  });
+
+  fetch (request2012)
+  .then((response) => response.json())
+  .then((persdata2) => {
+    console.log(persdata2);
+
+}); 
+
 
 //Hämtar data på kolioxid för personbil mellan åren 2012 -2022
 
@@ -158,28 +222,28 @@ const urlkol = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/MI0107
 const querykol = {
     "query": [
         {
-          "code": "Vaxthusgaser",
-          "selection": {
-            "filter": "item",
-            "values": [
+          code: "Vaxthusgaser",
+          selection: {
+            filter: "item",
+            values: [
               "CO2-ekv."
             ]
           }
         },
         {
-          "code": "Transportslag",
-          "selection": {
-            "filter": "item",
-            "values": [
+          code: "Transportslag",
+          selection: {
+            filter: "item",
+            values: [
               "8.5.1"
             ]
           }
         },
         {
-          "code": "Bransleslag",
-          "selection": {
-            "filter": "item",
-            "values": [
+          code: "Bransleslag",
+          selection: {
+            filter: "item",
+            values: [
               "1",
               "3",
               "4",
@@ -189,10 +253,10 @@ const querykol = {
           }
         },
         {
-          "code": "Tid",
-          "selection": {
-            "filter": "item",
-            "values": [
+          code: "Tid",
+          selection: {
+            filter: "item",
+            values: [
               "2012",
               "2013",
               "2014",
@@ -212,16 +276,21 @@ const querykol = {
         "format": "JSON"
       }
   }
-  const requestkol = new Request (urlkol, {
-    method: "POST",
-    body: JSON.stringify(querykol)
-  });
+  
 
-  fetch (requestkol)
-  .then((response) => response.json())
-  .then((koldata) => {
-    console.log(koldata);
+
+const requestkol = new Request (urlkol, {
+  method: "POST",
+  body: JSON.stringify(querykol)
+});
+
+fetch (requestkol)
+.then((response) => response.json())
+.then((koldata) => {
+  console.log(koldata);
 
 });
+
+
 
 
