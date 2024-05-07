@@ -137,10 +137,11 @@ const query2022 = {
         label: "Antal personbilar i alla län i Sverige år 2022",
         data,
         fill: false,
-        borderWidth: 2,
+        borderWidth: 1,
         borderColor: "hsla(250, 100%, 30%, 1)",
         hoverBorderWidth: 4,
-        tension: 0.5
+        tension: 0.5,
+        barThickness: 50
         
       }];
 
@@ -201,6 +202,7 @@ const query2012 = {
       "format": "JSON"
     }
   }
+  
 
   const request2012 = new Request (urlSCB, {
     method: "POST",
