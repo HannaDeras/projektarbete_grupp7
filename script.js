@@ -54,7 +54,6 @@ const querySCB = {
     const data = years.map((year) => year.values[0]);
     console.log(data);  
 
-  
 
   const datasets = [
     {
