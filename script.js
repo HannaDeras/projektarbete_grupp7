@@ -63,7 +63,8 @@ const querySCB = {
       data,
       fill: false,
       borderWidth: 2,
-      borderColor: "hsla(250, 100%, 30%, 1)",
+      borderColor: "#40A2E3",
+      backgroundColor: "#e8eef0",
       hoverBorderWidth: 4,
       tension: 0.5
       
@@ -139,7 +140,8 @@ const query2022 = {
         data,
         fill: false,
         borderWidth: 1,
-        borderColor: "hsla(250, 100%, 30%, 1)",
+        borderColor: "#40A2E3",
+        backgroundColor: "#e8eef0",
         hoverBorderWidth: 4,
         tension: 0.5,
         barThickness: 50
@@ -217,7 +219,8 @@ const query2012 = {
         data,
         fill: false,
         borderWidth: 1,
-        borderColor: "hsla(250, 100%, 30%, 1)",
+        borderColor: "#40A2E3",
+        backgroundColor: "#e8eef0",
         hoverBorderWidth: 4,
         tension: 0.5,
         barThickness: 50
@@ -246,82 +249,89 @@ const query2012 = {
 const urlkol = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/MI0107InTranspNN";
 
 const querykol = {
-    "query": [
-        {
-          code: "Vaxthusgaser",
-          selection: {
-            filter: "item",
-            values: [
-              "CO2-ekv."
-            ]
-          }
-        },
-        {
-          code: "Transportslag",
-          selection: {
-            filter: "item",
-            values: [
-              "8.5.1"
-            ]
-          }
-        },
-        {
-          code: "Bransleslag",
-          selection: {
-            filter: "item",
-            values: [
-              "1",
-              "3",
-              "4",
-              "5",
-              "6"
-            ]
-          }
-        },
-        {
-          code: "Tid",
-          selection: {
-            filter: "item",
-            values: [
-              "2012",
-              "2013",
-              "2014",
-              "2015",
-              "2016",
-              "2017",
-              "2018",
-              "2019",
-              "2020",
-              "2021",
-              "2022"
-            ]
-          }
-        }
-      ],
-      "response": {
-        "format": "JSON"
+  "query": [
+    {
+      "code": "Vaxthusgaser",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "CO2-ekv."
+        ]
       }
+    },
+    {
+      "code": "Transportslag",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "8.5.1"
+        ]
+      }
+    },
+    {
+      "code": "Bransleslag",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "0"
+        ]
+      }
+    },
+    {
+      "code": "Tid",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "JSON"
   }
-  
+}
+ 
   function printSCBChart4(dataSCBkol){
+    console.log(dataSCBkol)
     const years = dataSCBkol.data;
-    const labels = years.map((year) => year.key[2]);
+    const labels = years.map((year) => year.key[3]);
     console.log(labels);  
     const data = years.map((year) => year.values[0]);
-    console.log(data); 
+    console.log(data);  
+    console.log(years);
+    
 
     const datasets = [
       {
-        label: "",
+        label: "Totala mängden växthusgas för personbil mellan åren 2012-2022",
         data,
         fill: false,
-        borderWidth: 1,
-        borderColor: "hsla(250, 100%, 30%, 1)",
+        borderWidth: 2,
+        borderColor: "#40A2E3",
+        backgroundColor: "#e8eef0",
         hoverBorderWidth: 4,
-        tension: 0.5,
-        barThickness: 50
+        tension: 0.5
+        
       }];
-
+  
+  
+    new Chart(document.getElementById("myChart4"), {
+      type: "line",
+      data: {labels, datasets}
+  
+    });
+  }
 
 
 const requestkol = new Request (urlkol, {
@@ -331,10 +341,7 @@ const requestkol = new Request (urlkol, {
 
 fetch (requestkol)
 .then((response) => response.json())
-.then((koldata) => {
-  console.log(koldata);
-
-});
+.then(printSCBChart4);
 
 
 

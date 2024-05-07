@@ -4,6 +4,17 @@ body {
 
 }
 
+
+
+.bild1{
+  float: right;
+  
+}
+
+.grafer{
+  margin-top: 20rem;
+}
+
 h2{
     text-align: center;
     font-family: sans-serif;
@@ -36,6 +47,7 @@ img{
 
 .header{
   background-color: #e8eef0;
+
 }
 
 footer{
@@ -63,6 +75,7 @@ footer{
     float: left;
     font-family: sans-serif;
     font-weight: bolder;
+  
   }
   
   li a {
@@ -72,8 +85,73 @@ footer{
     padding: 14px 16px;
     text-decoration: none;
     
+    
   }
   
   li a:hover {
     background-color: #FFF6E9;
   }
+
+  
+  
+  
+  /*@media screen and (max-width: 992px) {
+    .grafer {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
+    .chart1{
+      width: 50%;
+    float: left;
+    
+    border: 2px solid red;
+    }
+
+    .chart2{
+      width: 50%;
+    float: right;
+   
+    border: 2px solid red;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .grafer {
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
+    .chart1{
+      width: 70%;
+    float: left;
+ 
+    border: 2px solid red;
+    }
+
+    .chart2{
+      width: 50%;
+    float: right;
+    
+    border: 2px solid red;
+    }
+    
+  }
+
+  @media screen and (min-width: 600px) {
+    .grafer {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      
+      
+    }
+  }
+  
+
+
+
+
+
