@@ -246,16 +246,17 @@ const querykol = {
         data,
         fill: false,
         borderWidth: 2,
-        borderColor: "#40A2E3",
+        borderColor: ["#40A2E3", "#67E59A"],
         backgroundColor: "#e8eef0",
         hoverBorderWidth: 4,
-        tension: 0.5
+        tension: 0.5,
+        radius: 5
         
       }];
   
   
     new Chart(document.getElementById("myChart3"), {
-      type: "line",
+      type: "bubble",
       data: {labels, datasets}
   
     });
@@ -272,25 +273,34 @@ fetch (requestkol)
 .then(printSCBChart3);
 
 
-const urllän ="https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik";
+const urlkol2 ="https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/MI0107InTranspNN";
 
-const querylän = {
+const querykol2 = {
   "query": [
     {
-      "code": "Region",
+      "code": "Vaxthusgaser",
       "selection": {
         "filter": "item",
         "values": [
-          "20"
+          "CO2-ekv."
         ]
       }
     },
     {
-      "code": "Fordonsslag",
+      "code": "Transportslag",
       "selection": {
         "filter": "item",
         "values": [
-          "10"
+          "8.5.1"
+        ]
+      }
+    },
+    {
+      "code": "Bransleslag",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "0"
         ]
       }
     },
@@ -300,15 +310,6 @@ const querylän = {
         "filter": "item",
         "values": [
           "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
           "2022"
         ]
       }
@@ -318,11 +319,10 @@ const querylän = {
     "format": "JSON"
   }
 }
-
-function printSCBChart4(dataSCBlän){
-  console.log(dataSCBlän)
-  const years = dataSCBlän.data;
-  const labels = years.map((year) => year.key[2]);
+function printSCBChart4(dataSCBkol2){
+  console.log(dataSCBkol2)
+  const years = dataSCBkol2.data;
+  const labels = years.map((year) => year.key[3]);
   console.log(labels);  
   const data = years.map((year) => year.values[0]);
   console.log(data);  
@@ -330,15 +330,16 @@ function printSCBChart4(dataSCBlän){
 
 const datasets = [
     {
-      label: "Antal personbilar i Dalarnas län år 2012 och 2022",
+      label: "Totala mängden växthusgas för personbil år 2012 och 2022",
       data,
       fill: false,
       borderWidth: 1,
-      borderColor: ["#40A2E3"],
-      backgroundColor: ["#e8eef0"],
+      borderColor: ["#40A2E3", "#67E59A"],
+      backgroundColor: ["#e8eef0", "#A2E4BD"],
       hoverBorderWidth: 4,
       tension: 0.5,
-      barThickness: 5
+      barThickness: 50,
+      
       
     }];
 
@@ -350,15 +351,20 @@ new Chart(document.getElementById("myChart4"), {
   }
 
 
-const requestlän = new Request (urllän, {
+const requestkol2 = new Request (urlkol2, {
   method: "POST",
-  body: JSON.stringify(querylän)
+  body: JSON.stringify(querykol2)
 });
 
-fetch (requestlän)
+fetch (requestkol2)
   .then((response) => response.json())
   .then(printSCBChart4);
 
+
+
+
+
+       
 
 
 
