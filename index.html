@@ -33,54 +33,64 @@
     <h2>
       Dagens problem
     </h2>
-    <div class="bild1">
-    <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237376101265838080/bil_bild.png?ex=663b6bcb&is=663a1a4b&hm=8e6db2a57214cb49db1556581dbd27b990463af8e35904d2cc4dfe383922ff2d&" alt="pic1" width="300" height="300" > 
-   </div>
+   <div class="content-dp">
+   <div class="paragraf">
     <p>
-      Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB och innehåller data om 
+      Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB.
     </p>
-    <div class="introlist">
+    <p>Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna. </p>
+    </div>
+    <div class="paragraf">
+      <h3>Våra dataset</h3>
       <li>1: Över fordon i trafik efter län och komun, samt fordonsslag (2012-2023).</li>
      <li> 2: Utsläpp av växthusgaser från inrikes transporter efter typ av växthusgas, bränsle och transportsslag (1990-2022).</li>
     </div>
-    <p>bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna. </p>
   </div>
+  <div class="bild">
+    <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237376101265838080/bil_bild.png?ex=663b6bcb&is=663a1a4b&hm=8e6db2a57214cb49db1556581dbd27b990463af8e35904d2cc4dfe383922ff2d&" alt="pic1" width="500" height="500" > 
+  </div>
+ </div>
+ 
   
-  <div class="grafer">
+  
+<div class="grafer">
+  <div class="titel">
   <h2>Trender i antal personbilar och koldioxidutsläpp: En analys av åren 2012-2022</h2>
-  <div class="chart1" id = "section1">
-  <div class="myChart-container"> <h3>Graf 1</h3>
-    <canvas id= "myChart"> </canvas>
-    <div class="paragraf">
-      <p>hej</p>
-    </div>
+</div>
+  
+  
+<div class="row">
+  <div class="column">
+   <h3>Graf 1</h3>
+     <canvas id= "myChart"> </canvas>
+     <div class="paragraf">
+        <p>hej</p>
+      </div>
+ </div>
+
+  <div class="column">
+     <h3>Graf 2</h3>
+      <canvas id= "myChart2"> </canvas>
+      <div class="paragraf">
+       <p>hej</p>
+      </div>
   </div>
-  </div>
-  <div class="chart2" id = "section2">
-  <div class="myChart2-container"> <h3>Graf 2</h3>
-    
-    <canvas id= "myChart2"> </canvas>
-    <div class="paragraf">
-      <p>hej</p>
-    </div>
-  </div>
-  </div>
-    <div class="chart3" id = "section3">
-  <div class="myChart3-container"> <h3>Graf 3</h3>
-    <canvas id= "myChart3"> </canvas>
-    <div class="paragraf">
-      <p>hej</p>
-    </div>
-  </div>
-  <div class="chart4" id = "section4">
-    <div class="myChart4-container"> <h3>Graf 4</h3>
-      <canvas id= "myChart4"> </canvas>
-    </div>
+
+  <div class="column">
+     <h3>Graf 3</h3>
+      <canvas id= "myChart3"> </canvas>
       <div class="paragraf">
         <p>Mängden av växthusgaser mäts i kiloton (kt)</p>
-      </div>
-    </div>   
-  </div>
+      </div> 
+  </div> 
+
+  <div class="column">
+    <h3>Graf 4</h3>
+     <canvas id= "myChart4"> </canvas>
+     <div class="paragraf">
+       <p>Antal personbilar per län</p>
+     </div> 
+ </div> 
 </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

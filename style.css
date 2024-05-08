@@ -6,13 +6,10 @@ body {
 
 
 
-.bild1{
-  float: right;
-  
-}
+
 
 .grafer{
-  margin-top: 20rem;
+  margin-top: 2rem;
 }
 
 h2{
@@ -54,7 +51,6 @@ footer{
     background-color: #e8eef0;
     padding: 20px 0;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
     font-family: sans-serif;
@@ -95,62 +91,72 @@ footer{
   
   
   
-  /*@media screen and (max-width: 992px) {
-    .grafer {
-      width: 50%;
-      display: flex;
-      flex-wrap: wrap;
-      
-    }
-    .chart1{
-      width: 50%;
-    float: left;
-    
-    border: 2px solid red;
-    }
 
-    .chart2{
-      width: 50%;
-    float: right;
-   
-    border: 2px solid red;
-    }
+* {
+  box-sizing: border-box;
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-dp{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+/* Create two equal columns */
+.column{
+  flex: 50%;
+  padding: 20px;
+  width:50%;
+}
+
+.paragraf{
+  flex: 50%;
+  padding: 3rem;
+  width:50%;
+}
+
+
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column{
+    flex: 50%;
+    padding: 20px;
+    max-width: 50%;
   }
 
-  @media screen and (min-width: 1600px) {
-    .grafer {
-      width: 70%;
-      display: flex;
-      flex-wrap: wrap;
-      
-    }
-    .chart1{
-      width: 70%;
-    float: left;
- 
-    border: 2px solid red;
-    }
-
-    .chart2{
-      width: 50%;
-    float: right;
-    
-    border: 2px solid red;
-    }
-
-    }
-    
+  .paragraf{
+    flex: 50%;
+    padding: 20px;
+    max-width: 50%;
   }
 
-  @media screen and (min-width: 600px) {
-    .grafer {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      
-      
-    }
+
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row{
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
   }
+
+  .content-dp{
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
   
 
 
