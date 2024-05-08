@@ -281,29 +281,7 @@ const querylän = {
       "selection": {
         "filter": "item",
         "values": [
-          "01",
-          "03",
-          "04",
-          "05",
-          "06",
-          "07",
-          "08",
-          "09",
-          "10",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25"
+          "20"
         ]
       }
     },
@@ -339,7 +317,7 @@ const querylän = {
   "response": {
     "format": "JSON"
   }
-};
+}
 
 function printSCBChart4(dataSCBlän){
   console.log(dataSCBlän)
@@ -350,36 +328,40 @@ function printSCBChart4(dataSCBlän){
   console.log(data);  
   console.log(years);
 
+const datasets = [
+    {
+      label: "Antal personbilar i Dalarnas län år 2012 och 2022",
+      data,
+      fill: false,
+      borderWidth: 1,
+      borderColor: ["#40A2E3"],
+      backgroundColor: ["#e8eef0"],
+      hoverBorderWidth: 4,
+      tension: 0.5,
+      barThickness: 5
+      
+    }];
 
-  const datasets = [
-      {
-        label: "Antal personbilar i alla län (2012-2022)",
-        data,
-        fill: false,
-        borderWidth: 2,
-        borderColor: "#40A2E3",
-        backgroundColor: "#e8eef0",
-        hoverBorderWidth: 4,
-        tension: 0.5
-        
-      }];
-
-
-
-  new Chart(document.getElementById("myChart4"), {
-      type: "bar",
-      data: {labels, datasets}
+new Chart(document.getElementById("myChart4"), {
+  type: "bar",
+  data: {labels, datasets}
   
     });
   }
 
-  const requestlän = new Request (urllän, {
-    method: "POST",
-    body: JSON.stringify(querylän)
-  });
 
-  fetch (requestlän)
+const requestlän = new Request (urllän, {
+  method: "POST",
+  body: JSON.stringify(querylän)
+});
+
+fetch (requestlän)
   .then((response) => response.json())
   .then(printSCBChart4);
+
+
+
+
+
   
 
