@@ -40,6 +40,8 @@ p{
     text-align: center;
     font-family: serif;
     color: #5e5f61;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
 
 }
@@ -179,7 +181,7 @@ button:hover {
   }
 
  .dp{
-  flex: 49%;
+  flex: 50%;
     padding: 20px;
     max-width: 100%;
  }
@@ -204,13 +206,17 @@ button:hover {
     flex-direction: column;
     flex: 100%;
     max-width: 100%;
+    align-content: center;
   }
 
   .content-dp{
     flex-direction: column;
     flex: 100%;
     max-width: 100%;
+    align-items: center;
   }
+
+
 
   .btn-container{
     flex-direction: column;
