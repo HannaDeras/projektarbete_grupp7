@@ -1,12 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+ }
+ 
+ a {
+  text-decoration: none;
+  color: black;
+ } 
+ 
+ #Samåkning {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+ } 
+
 body {
     background-color: #FFF6E9;
 
-
 }
+
 
 .grafer{
   margin-top: 2rem;
 }
+
 
 h2{
     text-align: center;
@@ -25,8 +46,7 @@ h3{
 p{
     text-align: center;
     font-family: sans-serif;
-    color: #40A2E3;
-    font-weight: bolder;
+    color:#40A2E3;
 
 }
 
@@ -38,7 +58,7 @@ img{
     
 }
 
-.header{
+header{
   background-color: #e8eef0;
 
 }
@@ -149,8 +169,7 @@ button{
 }
 
 .button:hover {
-  background-color: #1504aa; /* Green */
-  color: white;
+  color: #40A2E3;
 }
 
 

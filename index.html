@@ -6,16 +6,14 @@
   <title>CarcoCheck</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class = "header" > 
-    <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=663b33e9&is=6639e269&hm=db103761c6f840ca620776943aaee67ea389b54c676dbcf368ba78e82db3093d&" alt="logo" width="100" height="80"> 
-  </div>
+<header>
+  <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=663b33e9&is=6639e269&hm=db103761c6f840ca620776943aaee67ea389b54c676dbcf368ba78e82db3093d&" alt="logo" width="100" height="80"> 
   <nav>
     <div class="navabar" >
     </div> 
     <ul class="nav-links" >
       <div class ="btn-1">
-        <li><a href="#myChart">Graf 1</a></li>
+        <li><a href="">Graf 1</a></li>
       </div>
       <div class ="btn-2">
         <li><a href="#myChart2">Graf 2</a></li>
@@ -28,11 +26,14 @@
       </div class="btn-5">
         <li><a href="#section5">Dagens problem</a></li>
       </div class="btn-6">
-        <li><a href="#samakning">Samåkning</a></li>
+        <li><a href="#Samåkning">Samåkning</a></li>
        
         
     </ul>
   </nav>
+</header>
+<body>
+ 
   <div class="DP" id="section5">
     <h2>
       Dagens problem
@@ -83,7 +84,7 @@
   
 <div class="row">
   <div class="column">
-   <h3>Graf 1</h3>
+   <h3>Antalet personbilar i alla län i Sverige (mellan år 2012-2022)</h3>
      <canvas id= "myChart"> </canvas>
      <div class="paragraf">
         <p>hej</p>
@@ -91,7 +92,7 @@
  </div>
 
   <div class="column">
-     <h3>Graf 2</h3>
+     <h3>Antal personbilar i alla län i Sverige år 2012 och 2022</h3>
       <canvas id= "myChart2"> </canvas>
       <div class="paragraf">
        <p>hej</p>
@@ -99,7 +100,7 @@
   </div>
 
   <div class="column">
-     <h3>Graf 3</h3>
+     <h3>Den totala mängden växthusgas för personbil (mellan åren 2012-2022)</h3>
       <canvas id= "myChart3"> </canvas>
       <div class="paragraf">
         <p>Mängden av växthusgaser mäts i kiloton (kt)</p>
@@ -107,14 +108,14 @@
   </div> 
 
   <div class="column">
-    <h3>Graf 4</h3>
+    <h3>Totala mängden växthusgas för personbil år 2012 och 2022</h3>
      <canvas id= "myChart4"> </canvas>
      <div class="paragraf">
        <p>Antal personbilar per län</p>
      </div> 
  </div> 
  <div class="column">
-  <h3>Graf 5</h3>
+  <h3>Antalet personbilar i olika län i Sverige (mellan år 2012-2022</h3>
    <canvas id= "myChart5"> </canvas>
    <div class="paragraf">
      <p>Antal personbilar per län</p>
@@ -122,17 +123,19 @@
 </div> 
 
 <div class="Rekomendation" id="samakning">
-<h3>Vill du hjälpa till med att minska mängden växthusgaser?</h3>
+<h2>Vill du hjälpa till med att minska mängden växthusgaser?</h2>
 <p>
-  För att minska mängden bilar i trafik är en lösning att samåka med andra. En vanlig personbil har upp till 5 platser. Detta skulle betyda att 4 bilar inte behöver sättas i trafik. Det finns flera olika tjänster där man kan hitta personer att åka med.
+  För att minska mängden bilar i trafik är en lösning att samåka med andra. En vanlig personbil har upp till 5 platser. Detta skulle betyda att 4 bilar inte behöver sättas i trafik. Det finns flera olika tjänster där man kan hitta personer att åka med. 
 </p>
+
+<div id="Samåkning">
 
 <a href="https://nabogo.com/sv/" class="button">Nabogo</a>
 <a href="https://coride.se/" class="button">Coride</a>
 <a href="https://www.passenger.se/drive " class="button">Passenger</a>
+</div>
+</div>
 
-</div>
-</div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>

@@ -59,7 +59,7 @@ const querySCB = {
 
   const datasets = [
     {
-      label: "Antal personbilar i alla län i Sverige mellan år 2012-2022",
+      label: "Antal personbilar",
       data,
       fill: false,
       borderWidth: 2,
@@ -137,7 +137,7 @@ const query2022 = {
 
     const datasets = [
       {
-        label: "Antal personbilar i alla län i Sverige år 2012 och 2022",
+        label: "Antal personbilar",
         data,
         fill: false,
         borderWidth: 1,
@@ -242,7 +242,7 @@ const querykol = {
 
     const datasets = [
       {
-        label: "Totala mängden växthusgas för personbil mellan åren 2012-2022",
+        label: "Totala mängden växthusgas",
         data,
         fill: false,
         borderWidth: 2,
@@ -330,7 +330,7 @@ function printSCBChart4(dataSCBkol2){
 
 const datasets = [
     {
-      label: "Totala mängden växthusgas för personbil år 2012 och 2022",
+      label: "Totala mängden växthusgas",
       data,
       fill: false,
       borderWidth: 1,
@@ -458,7 +458,7 @@ function printSCBChart5(dataSCB5) {
   //1 dataset per linje eller stapel per datapunkt vid x axeln.
   const datasets = [
     {
-      label: 'Antal personbilar i Stockholm ',
+      label: 'Stockholms Län ',
       data: dataStockholm,
       fill: false,
       borderWidth: 2,
@@ -466,7 +466,7 @@ function printSCBChart5(dataSCB5) {
       tension: 0.5
     },
     {
-      label: 'Antal personbilar i Dalarna',
+      label: 'Dalarnas Län',
       data: dataDalarna,
       fill: false,
       borderWidth: 2,
@@ -474,7 +474,7 @@ function printSCBChart5(dataSCB5) {
       tension: 0.5,
     },
     {
-      label: 'Antal personbilar i Kalmar ',
+      label: 'Kalmar Län ',
       data: dataKalmar,
       fill: false,
       borderWidth: 2,
@@ -483,7 +483,7 @@ function printSCBChart5(dataSCB5) {
     },
 
     {
-      label: 'Antal personbilar i Västra götaland',
+      label: 'Västra götalands Län',
       data: dataVästraGötaland,
       fill: false,
       borderWidth: 2,
@@ -491,7 +491,7 @@ function printSCBChart5(dataSCB5) {
       tension: 0.5
     },
     {
-      label: 'Antal personbilar i Västerbotten ',
+      label: 'Västerbottens Län ',
       data: dataVästerbotten,
       fill: false,
       borderWidth: 2,
@@ -499,7 +499,7 @@ function printSCBChart5(dataSCB5) {
       tension: 0.5
     },
     {
-      label: 'Antal personbilar i Norrbotten ',
+      label: 'Norrbottens Län ',
       data: dataNorrbotten,
       fill: false,
       borderWidth: 2,
