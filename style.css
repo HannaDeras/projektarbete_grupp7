@@ -1,33 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
 html {
   scroll-behavior: smooth;
  }
- 
+
  a {
   text-decoration: none;
   color: black;
- } 
- 
- #Samåkning {
-  margin-top: 1rem;
-  padding-bottom: 1rem;
  } 
 
 body {
     background-color: #FFF6E9;
 
+
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .grafer{
   margin-top: 2rem;
 }
-
 
 h2{
     text-align: center;
@@ -45,8 +38,9 @@ h3{
 
 p{
     text-align: center;
-    font-family: sans-serif;
-    color:#40A2E3;
+    font-family: serif;
+    color: #5e5f61;
+    
 
 }
 
@@ -169,10 +163,12 @@ button{
 }
 
 .button:hover {
-  color: #40A2E3;
+  background-color: #40A2E3;
 }
 
-
+button:hover {
+  background-color: #40A2E3;
+}
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
 @media screen and (max-width: 992px) {
