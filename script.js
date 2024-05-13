@@ -361,13 +361,167 @@ fetch (requestkol2)
   .then(printSCBChart4);
 
 
+//test med två dataset
 
+const urlSCB5 = 'https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik';
 
+const querySCB5 = {
+  "query": [
+    {
+      "code": "Region",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "01",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25"
+        ]
+      }
+    },
+    {
+      "code": "Fordonsslag",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "10"
+        ]
+      }
+    },
+    {
+      "code": "Tid",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "JSON"
+  }
+}
 
-       
+function printSCBChart5(dataSCB5) {
+  //kontrollera datasetet
+  console.log(dataSCB5);
 
+  //hämta alla labels - enligt scb:s format (som inte ännu passar oss)
+ const labelsRaw = dataSCB5.data.map((data) => data.key[2]);
+  console.log(labelsRaw);
+  //hämta alla värden - enligt scb:s format (som inte ännu passar oss)
+  const valuesRaw = dataSCB5.data.map((data) => data.values[0]);
+  console.log(valuesRaw);
+  //göra alla labels unika
+  const labels = [...new Set(labelsRaw)];
+  console.log(labels);
+  //dela värdena så att hälften hör till Borlänge och resten till Falun.
+  const dataStockholm = valuesRaw.splice(0, labels.length);
+  const dataDalarna = valuesRaw.splice(0, labels.length);
+  const dataKalmar = valuesRaw.splice(0, labels.length);
+  const dataVästraGötaland = valuesRaw.splice(0, labels.length);
+  const dataVästerbotten = valuesRaw.splice(0, labels.length);
+  const dataNorrbotten = valuesRaw;
 
+  console.log('Stockholms Län: ', dataStockholm, 'Dalarnas Län', dataDalarna, "Kalmar Län", dataKalmar,"Västra Götaland Län", dataVästraGötaland, "Västerbottens Län", dataVästerbotten, "Norrbottens Län", dataNorrbotten);
 
+  //1 dataset per linje eller stapel per datapunkt vid x axeln.
+  const datasets = [
+    {
+      label: 'Antal personbilar i Stockholm ',
+      data: dataStockholm,
+      fill: false,
+      borderWidth: 2,
+      hoverBorderWidth: 4,
+      tension: 0.5
+    },
+    {
+      label: 'Antal personbilar i Dalarna',
+      data: dataDalarna,
+      fill: false,
+      borderWidth: 2,
+      hoverBorderWidth: 4,
+      tension: 0.5,
+    },
+    {
+      label: 'Antal personbilar i Kalmar ',
+      data: dataKalmar,
+      fill: false,
+      borderWidth: 2,
+      hoverBorderWidth: 4,
+      tension: 0.5
+    },
 
-  
+    {
+      label: 'Antal personbilar i Västra götaland',
+      data: dataVästraGötaland,
+      fill: false,
+      borderWidth: 2,
+      hoverBorderWidth: 4,
+      tension: 0.5
+    },
+    {
+      label: 'Antal personbilar i Västerbotten ',
+      data: dataVästerbotten,
+      fill: false,
+      borderWidth: 2,
+      hoverBorderWidth: 4,
+      tension: 0.5
+    },
+    {
+      label: 'Antal personbilar i Norrbotten ',
+      data: dataNorrbotten,
+      fill: false,
+      borderWidth: 2,
+      hoverBorderWidth: 4,
+      tension: 0.5
+    }
+
+  ];
+
+  new Chart(document.getElementById('myChart5'), {
+    type: 'bar',
+    data: { labels, datasets }
+  });
+}
+
+const request5 = new Request(urlSCB5, {
+  method: 'POST',
+  body: JSON.stringify(querySCB5)
+});
+
+fetch(request5)
+  .then((response) => response.json())
+  .then(printSCBChart5);
+
 

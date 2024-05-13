@@ -4,10 +4,6 @@ body {
 
 }
 
-
-
-
-
 .grafer{
   margin-top: 2rem;
 }
@@ -124,6 +120,10 @@ footer{
  align-items: center;
 }
 
+.btn-container{
+  position: relative;
+}
+
 .button {
   background-color: #67E59A;
   border: none;
@@ -136,12 +136,24 @@ footer{
   margin: 4px 2px;
   cursor: pointer;
   justify-content: center;
+  border-radius: 1rem;
+}
+
+button{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background-color: #67E59A;
+  border-radius: 1rem;
 }
 
 .button:hover {
   background-color: #1504aa; /* Green */
   color: white;
 }
+
+
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
 @media screen and (max-width: 992px) {
@@ -157,6 +169,17 @@ footer{
     max-width: 100%;
  }
 
+ .button{
+  flex: 49%;
+    padding: 20px;
+    max-width: 100%;
+ }
+
+ button{
+  flex: 49%;
+  
+   
+ }
 
 }
 
@@ -169,6 +192,12 @@ footer{
   }
 
   .content-dp{
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .btn-container{
     flex-direction: column;
     flex: 100%;
     max-width: 100%;
