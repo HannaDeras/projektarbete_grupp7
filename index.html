@@ -39,10 +39,10 @@
       Dagens problem
     </h2>
    <div class="content-dp">
-   <div class="paragraf">
-    <p>
+   <div class="intro">
+    
       Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB.
-      Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna. </p>
+      Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.
     </div>
     
     <div class="dp">
@@ -50,7 +50,7 @@
         <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237697007703822336/bil_bild_2.png?ex=663c96a9&is=663b4529&hm=7b98e9869bff69bd05f92bc7f9a979c46870598f9056413ee17783b88d976874&" alt="pic1" width="500" height="500" > 
       </div>
       <h3>Dataset 1</h3>
-      <p>Över fordon i trafik efter län och komun, samt fordonsslag (2012-2023).</p>
+      <p>Ett dataset från SCB, innehåller data om fordon i trafik efter län och komun, samt fordonsslag (2002-2023).</p>
       <div class="btn-container">
       <button>
       <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__TK__TK1001__TK1001A/FordonTrafik/" class="button">Läs mer om detta dataset</a>
@@ -63,7 +63,7 @@
         <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237376101265838080/bil_bild.png?ex=663b6bcb&is=663a1a4b&hm=8e6db2a57214cb49db1556581dbd27b990463af8e35904d2cc4dfe383922ff2d&" alt="pic1" width="500" height="500" > 
       </div>
       <h3>Dataset 2</h3>
-      <p> Utsläpp av växthusgaser från inrikes transporter efter typ av växthusgas, bränsle och transportsslag (1990-2022).</p>
+      <p> Ett dataset från SCB, innehåller data om utsläpp av växthusgaser från inrikes transporter efter typ av växthusgas, bränsle och transportsslag (1990-2022).</p>
       <div class="btn-container">
         <button>
         <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" class="button">Läs mer om detta dataset</a>
@@ -85,7 +85,7 @@
   <div class="column">
     <div id="Graf1">
    <h3>Ökning av personbilar (2012-2022)</h3>
-     <canvas id= "myChart"> </canvas>
+     <canvas id= "myChart"></canvas>
      <div class="paragraf">
         <p>Denna graf visar ökningen av den totala mängden personbilar i Sverige från år 2012 till år 2022. Det lägsta mängden bilar var 2012 med <strong>4 447 165</strong> och den högsta mängden bilar år 2021 med <strong>4 986 750</strong>. Med andra ord så sänktes den totala mängden personbilar igen år 2022, då det endast fanns <strong>4 980 543</strong> bilar. </p>
       </div>
@@ -129,29 +129,43 @@
     <div id="Graf5">
   <h3>Skillnanden av antal personbilar i olika län(år 2012-2022)</h3>
    <canvas id= "myChart5"> </canvas>
-   <div class="paragraf">
-     <p>Denna graf visar antalet personbilar i Stockholms län, Dalarnas län, Kalmar län, Västa götalands län, Västerbottens län och Norrbottens län mellan år 2012-2022. Vi valde ut två län per landsdel då det hade blivit för mycket data att ha med alla 25 stycken län.  
+   <div class="text">
+    Denna graf visar antalet personbilar i Stockholms län, Dalarnas län, Kalmar län, Västa götalands län, Västerbottens län och Norrbottens län mellan år 2012-2022. Vi valde ut två län per landsdel då det hade blivit för mycket data att ha med alla 25 stycken län.  
      Man kan se att Stockholms län har flest antal personbilar under alla år, med ett lägsta antal år 2012 med <strong>829 469 </strong> stycken personbilar och ett högsta antal år 2022 med <strong>965 722</strong> stycken personbilar. Detta kan bero på att Stockholms län har flest invånare av alla de län vi valt ut.
      Det län med lägst antal personbilar under alla år är Norrbottens län med lägst antal bilar år 2012 med <strong>94 246 </strong> stycken personbilar och ett högsta antal år 2021 med <strong>104 477</strong> stycken personbilar. Detta kan bero på att Norrbottens län har lägst antal invånare av alla de län vi valt ut. 
-     Man kan även se att Stockholms län och Dalarnas län är de enda två länen som har högst antal bilar år 2022 medans de andra länen har högst antal bilar år 2021.</p>
-   </div> 
+     Man kan även se att Stockholms län och Dalarnas län är de enda två länen som har högst antal bilar år 2022 medans de andra länen har högst antal bilar år 2021.
+    
   </div>
 </div> 
 
 <div class="Rekomendation">
   <div id="Samåkning"></div>
 <h2>Vill du hjälpa till med att minska mängden växthusgaser?</h2>
-<p>
-  För att minska mängden bilar i trafik är en lösning att samåka med andra. En vanlig personbil har upp till 5 platser. Detta skulle betyda att 4 bilar inte behöver sättas i trafik. Det finns flera olika tjänster där man kan hitta personer att åka med. Här nedan finns det några sådana. 
-</p>
+<div class="samakning">
+  För att minska mängden bilar i trafik är en lösning att samåka med andra. En vanlig personbil har upp till 5 platser. Detta skulle betyda att 4 bilar inte behöver sättas i trafik. Det finns flera olika tjänster där man kan hitta personer att åka med. Här nedan finns det några sådana.
+</div>
 
 
-
-<a href="https://nabogo.com/sv/" class="button">Nabogo</a>
-<a href="https://coride.se/" class="button">Coride</a>
-<a href="https://www.passenger.se/drive " class="button">Passenger</a>
+<div class = "btn-row">
+  
+    <a href="https://nabogo.com/sv/" class="button-redirect">Nabogo</a>
+   
+    
+    <a href="https://coride.se/" class="button-redirect">Coride</a>
+    
+    
+    <a href="https://www.passenger.se/drive " class="button-redirect">Passenger</a>
+  </div>
 </div>
 </div>
+</div>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Tillbaka till toppen</button>
+ 
+ 
+ 
 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -159,7 +173,7 @@
 </body>
 
 <footer>
-  <p>Grupp 7 - Saga Jusslin och Hanna Deras <p>GIK373<br></p>
+  <p>Grupp 7 - Saga Jusslin och Hanna Deras <br>GIK373<br></p>
 </footer>
 
 </html>
