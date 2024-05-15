@@ -380,7 +380,7 @@ fetch (requestkol2)
   .then(printSCBChart4);
 
 
-//test med två dataset
+//Hämtar olika data från ett dataset- Antalet personbilar i olika län 
 
 const urlSCB5 = 'https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik';
 

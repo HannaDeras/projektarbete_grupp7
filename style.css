@@ -47,11 +47,12 @@ body {
 }
 
 h2{
-    text-align: center;
+    text-align: left;
     font-family: sans-serif;
     color: #67E59A;
     padding-top: 50px;
     padding-bottom: 15px;
+    padding-left:160px;
 }
 
 h3{
@@ -64,43 +65,43 @@ h3{
 }
 
 .intro{
-  text-align: center;
+  text-align: left;
     font-family: serif;
     color: #5e5f61;
     padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 160px;
-    padding-right: 160px;
+    padding-right: 600px;
   
 }
 
 .text{
-  text-align: center;
+  text-align: left;
     font-family: serif;
     color: #5e5f61;
     padding-top: 20px;
     padding-bottom: 30px;
-    padding-left: 160px;
-    padding-right: 160px;
+    padding-left: 20px;
+    padding-right: 600px;
   
 
 }
 
 .samakning{
-  text-align: center;
+  text-align: left;
     font-family: serif;
     color: #5e5f61;
     padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 160px;
-    padding-right: 160px;
+    padding-right: 600px;
   
 }
 
 
 
 p{
-    text-align: center;
+    text-align: left;
     font-family: serif;
     color: #5e5f61;
     padding-top: 20px;
@@ -185,16 +186,15 @@ footer{
 
 .btn-row{
   display:flex;
-  /* items are centered along the line */
   justify-content: center;
-  /* center: items are centered in the cross-axis */
   align-items: center;
 }
 
-/* Container for flexboxes */
+
 .row {
   display: flex;
   flex-wrap: wrap;
+  width:100%;
 }
 
 .content-dp{
@@ -203,9 +203,6 @@ footer{
 }
 
 
-
-
-/* Create two equal columns */
 .column{
   flex: 50%;
   padding: 20px;
@@ -279,11 +276,7 @@ footer{
 
  button{
   flex: 49%;
-  
-   
  }
-
-
 
 }
 
@@ -294,6 +287,7 @@ footer{
     max-width: 100%;
     align-content: center;
   }
+
 
   .content-dp{
     flex-direction: column;
