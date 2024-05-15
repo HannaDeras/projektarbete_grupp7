@@ -42,7 +42,7 @@ body {
 }
 
 .grafer{
-  margin-top: 2rem;
+ margin-top: 2rem;
 
 }
 
@@ -68,10 +68,10 @@ h3{
   text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding-top: 20px;
+    /*padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 160px;
-    padding-right: 600px;
+    padding-right: 600px;*/
   
 }
 
@@ -79,10 +79,10 @@ h3{
   text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding-top: 20px;
+  /*  padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 20px;
-    padding-right: 600px;
+    padding-right: 600px;*/
   
 
 }
@@ -91,10 +91,10 @@ h3{
   text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding-top: 20px;
+    /*padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 160px;
-    padding-right: 600px;
+    padding-right: 600px;*/
   
 }
 
@@ -104,16 +104,16 @@ p{
     text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding-top: 20px;
+    /*padding-top: 20px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 20px;*/
      
 
 }
 
 img{
-  display: block;
-  margin-left: auto;
+
+ margin-left: auto;
   margin-right: auto;
   padding: 1rem;
     
@@ -126,7 +126,7 @@ header{
 
 footer{
     background-color: #e8eef0;
-    padding: 20px 0;
+  /*  padding: 20px 0;*/
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -137,25 +137,25 @@ footer{
 
   ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    /*margin: 0;
+    padding: 0;*/
     overflow: hidden;
     background-color: #e8eef0;
     
   }
   
   li {
-    float: left;
+   /* float: left;*/
     font-family: sans-serif;
     font-weight: bolder;
   
   }
   
   li a {
-    display: block;
+   /* display: block;*/
     color: #40A2E3;
     text-align: center;
-    padding: 14px 16px;
+   /* padding: 14px 16px;*/
     text-decoration: none;
     
     
@@ -174,9 +174,9 @@ footer{
   background-color: #67E59A;
   border: none;
   color: white;
-  padding: 15px 32px;
+/*  padding: 15px 32px;*/
   border-radius: 1rem;
-  margin:1rem;
+ /* margin:1rem;*/
  
 }
 
@@ -205,20 +205,20 @@ footer{
 
 .column{
   flex: 50%;
-  padding: 20px;
-  width:50%;
+ /* padding: 20px;*/
+  width:100%;
   
 }
 
 .btn-col{
   flex: 50%;
-  padding: 20px;
+ /* padding: 20px;*/
   width:33%;
 }
 
 .dp{
   flex: 50%;
-  padding: 20px;
+ /* padding: 20px;*/
   width:70%;
  align-items: center;
 }
@@ -231,12 +231,12 @@ footer{
   background-color: #67E59A;
   border: none;
   color: white;
-  padding: 15px 32px;
+ /* padding: 15px 32px;*/
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+ /* margin: 4px 2px;*/
   cursor: pointer;
   justify-content: center;
   border-radius: 1rem;
@@ -253,24 +253,32 @@ footer{
 }
 
 
-
-
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 700px) {
   .column{
     flex: 50%;
-    padding: 20px;
+   /* padding: 20px;*/
     max-width: 50%;
+  }
+
+
+}
+
+@media screen and (max-width: 660px) {
+  .column{
+    flex: 50%;
+   /* padding: 20px;*/
+    max-width: 100%;
   }
 
  .dp{
   flex: 50%;
-    padding: 20px;
+   /* padding: 20px;*/
     max-width: 100%;
  }
 
  .button{
   flex: 49%;
-    padding: 20px;
+   /* padding: 20px;*/
     max-width: 100%;
  }
 
@@ -280,7 +288,7 @@ footer{
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 300px) {
   .row{
     flex-direction: column;
     flex: 100%;
@@ -304,6 +312,10 @@ footer{
     max-width: 100%;
   }
 
+
+  .column{
+    width:100%;
+  }
   
 }
 
