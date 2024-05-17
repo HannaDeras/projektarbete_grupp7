@@ -464,7 +464,11 @@ function printSCBChart5(dataSCB5) {
   //göra alla labels unika
   const labels = [...new Set(labelsRaw)];
   console.log(labels);
-  //dela värdena så att hälften hör till Borlänge och resten till Falun.
+
+
+
+  
+  //delar upp värdena 
   const dataStockholm = valuesRaw.splice(0, labels.length);
   const dataDalarna = valuesRaw.splice(0, labels.length);
   const dataKalmar = valuesRaw.splice(0, labels.length);
@@ -473,6 +477,8 @@ function printSCBChart5(dataSCB5) {
   const dataNorrbotten = valuesRaw;
 
   console.log('Stockholms Län: ', dataStockholm, 'Dalarnas Län', dataDalarna, "Kalmar Län", dataKalmar,"Västra Götaland Län", dataVästraGötaland, "Västerbottens Län", dataVästerbotten, "Norrbottens Län", dataNorrbotten);
+
+
 
   //1 dataset per linje eller stapel per datapunkt vid x axeln.
   const datasets = [
@@ -528,11 +534,18 @@ function printSCBChart5(dataSCB5) {
 
   ];
 
+
   new Chart(document.getElementById('myChart5'), {
     type: 'bar',
     data: { labels, datasets }
+    
+    
+
   });
+  
+  
 }
+
 
 const request5 = new Request(urlSCB5, {
   method: 'POST',
@@ -543,4 +556,4 @@ fetch(request5)
   .then((response) => response.json())
   .then(printSCBChart5);
 
-
+  

@@ -15,10 +15,12 @@ html {
   background-color: #40A2E3;
   color: white;
   cursor: pointer;
-  padding: 15px;
+ /* padding: 15px;*/
   border-radius: 10rem;
  
 }
+
+
 
 #myBtn:hover {
   background-color: #555;
@@ -32,18 +34,19 @@ html {
 
 body {
     background-color: #FFF6E9;
-    
+    margin: 0%;
 
 
 }
 
 * {
-  margin: 0;
-  padding: 0;
+ 
+  /*padding: 0;*/
 }
 
 .grafer{
- margin-top: 2rem;
+ /*margin-top: 2rem;*/
+ 
 
 }
 
@@ -51,16 +54,16 @@ h2{
     text-align: left;
     font-family: sans-serif;
     color: #67E59A;
-    padding-top: 50px;
+   /* padding-top: 50px;
     padding-bottom: 15px;
-    padding-left:100px;
+    padding-left:100px;*/
 }
 
 h3{
   text-align: center;
     font-family: sans-serif;
     color: #40A2E3;
-    padding-bottom: 10px;
+   /* padding-bottom: 10px;*/
     
   
 }
@@ -69,8 +72,7 @@ h3{
   text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding-left: 100px;
-    padding-right: 600px;
+  
     /*padding-top: 20px;
     padding-bottom: 30px;
     padding-left: 160px;
@@ -116,15 +118,22 @@ p{
 
 img{
 
- margin-left: auto;
+ padding: 1rem;
+  margin-left: auto;
   margin-right: auto;
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+
     
 }
 
 header{
-  background-color: #e8eef0;
-
+  
+  background-image: url('https://cdn.pixabay.com/photo/2019/10/20/22/33/road-4564817_1280.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
 }
 
 footer{
@@ -140,15 +149,15 @@ footer{
 
   ul {
     list-style-type: none;
-    /*margin: 0;
-    padding: 0;*/
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     background-color: #e8eef0;
     
   }
   
   li {
-   /* float: left;*/
+   float: left;
     font-family: sans-serif;
     font-weight: bolder;
   
@@ -198,6 +207,7 @@ footer{
   display: flex;
   flex-wrap: wrap;
   width:100%;
+  
 }
 
 .content-dp{
@@ -211,6 +221,14 @@ footer{
  /* padding: 20px;*/
   width:100%;
   
+
+  
+}
+
+.pic_txt{
+padding: 0rem 5rem 0rem 5rem;
+background-color: none;
+border: none;
 }
 
 .btn-col{
@@ -223,7 +241,8 @@ footer{
   flex: 50%;
  /* padding: 20px;*/
   width:70%;
- align-items: center;
+  align-items: center;
+
 }
 
 .btn-container{
@@ -277,6 +296,7 @@ footer{
   flex: 50%;
    /* padding: 20px;*/
     max-width: 100%;
+    
  }
 
  .button{
