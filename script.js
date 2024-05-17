@@ -465,8 +465,6 @@ function printSCBChart5(dataSCB5) {
   const labels = [...new Set(labelsRaw)];
   console.log(labels);
 
-
-
   
   //delar upp värdena 
   const dataStockholm = valuesRaw.splice(0, labels.length);
@@ -477,6 +475,7 @@ function printSCBChart5(dataSCB5) {
   const dataNorrbotten = valuesRaw;
 
   console.log('Stockholms Län: ', dataStockholm, 'Dalarnas Län', dataDalarna, "Kalmar Län", dataKalmar,"Västra Götaland Län", dataVästraGötaland, "Västerbottens Län", dataVästerbotten, "Norrbottens Län", dataNorrbotten);
+
 
 
 
