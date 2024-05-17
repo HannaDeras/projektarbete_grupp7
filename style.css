@@ -39,16 +39,9 @@ body {
 
 }
 
-* {
- 
-  /*padding: 0;*/
-}
 
-.grafer{
- width: 100%;
- 
 
-}
+
 
 h2{
     text-align: left;
@@ -118,7 +111,6 @@ p{
 
 img{
 
- padding: 1rem;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -127,13 +119,16 @@ img{
     
 }
 
+
 header{
   
   background-image: url('https://cdn.pixabay.com/photo/2019/10/20/22/33/road-4564817_1280.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-size: 100% 100%;
+  object-fit: fill;
+  
+  
+  
 }
 
 footer{
@@ -196,34 +191,8 @@ footer{
   background-color: #40A2E3;
 }
 
-.btn-row{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  width:100%;
-  
-}
-
-.content-dp{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-.column{
-  flex: 50%;
- /* padding: 20px;*/
-  width:100%;
-  
-
-  
-}
 
 .pic_txt{
 padding: 0rem 5rem 0rem 5rem;
@@ -274,6 +243,32 @@ border: none;
   background-color: #40A2E3;
 }
 
+
+.column{
+  flex: 50%;
+ /* padding: 20px;*/
+  width:100%;
+  
+}
+
+.btn-row{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  
+}
+
+.content-dp{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 @media screen and (min-width: 750px) {
   .column{
@@ -343,7 +338,59 @@ border: none;
 }
 
 
+  /*test*/
+
+  /*
+
+  @media screen and (min-width: 1024px) {
+    .row{
+      flex-direction: column;
+      flex: 100%;
+      max-width: 100%;
+      align-content: center;
+    }
   
+  
+    .content-dp{
+      flex-direction: column;
+      flex: 100%;
+      max-width: 100%;
+      align-items: center;
+    }
+  
+  
+  
+    .btn-container{
+      flex-direction: column;
+      flex: 100%;
+      max-width: 100%;
+    }
+  
+  
+    .column{
+      width:100%;
+    }
+  
+    .dp{
+      flex: 50%;
+       /* padding: 20px;
+        max-width: 100%;
+        
+     }
+    
+     .button{
+      flex: 49%;
+       /* padding: 20px;
+        max-width: 100%;
+     }
+    
+     button{
+      flex: 49%;
+     }
+    
+  }
+  
+  */
 
 
 
