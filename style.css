@@ -39,8 +39,11 @@ body {
 
 }
 
+.bild{
+  display: flex;
+  justify-content: center;
 
-
+}
 
 
 h2{
@@ -71,6 +74,7 @@ h3{
     padding-left: 160px;
     padding-right: 600px;*/
   
+
 }
 
 .text{
@@ -82,7 +86,6 @@ h3{
     padding-left: 20px;
     padding-right: 600px;*/
   
-
 }
 
 .samakning{
@@ -97,7 +100,6 @@ h3{
 }
 
 
-
 p{
     text-align: left;
     font-family: serif;
@@ -110,13 +112,11 @@ p{
 }
 
 img{
-
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  justify-content: center;
-
-    
+  margin:20px 50px 20px 50px;
+  align-items: right;
+  justify-content: right;
+  position: relative;
+  
 }
 
 
@@ -126,9 +126,10 @@ header{
   background-repeat: no-repeat;
   background-attachment: fixed;
   object-fit: fill;
+  display: flex;
   
-  
-  
+  position: relative;
+ 
 }
 
 footer{
@@ -138,8 +139,8 @@ footer{
     bottom: 0;
     width: 100%;
     font-family: sans-serif;
-}
 
+}
 
 
   ul {
@@ -148,15 +149,28 @@ footer{
     padding: 0;
     overflow: hidden;
     background-color: #e8eef0;
+    position: absolute;
+    display: flex;
+    bottom:0;
+    left:0;
+    width: 100%;
     
+
+
+
+  
   }
+
+  
   
   li {
-   float: left;
+   
     font-family: sans-serif;
     font-weight: bolder;
+    
   
   }
+
   
   li a {
    /* display: block;*/
@@ -165,8 +179,8 @@ footer{
    /* padding: 14px 16px;*/
     text-decoration: none;
     
-    
   }
+
   
   li a:hover {
     background-color: #FFF6E9;
@@ -189,15 +203,15 @@ footer{
 
 .button-redirect:hover {
   background-color: #40A2E3;
+
 }
-
-
 
 
 .pic_txt{
 padding: 0rem 5rem 0rem 5rem;
 background-color: none;
 border: none;
+
 }
 
 .btn-col{
@@ -205,6 +219,7 @@ border: none;
  /* padding: 20px;*/
   width:33%;
 }
+
 
 .dp{
   flex: 50%;
@@ -216,7 +231,9 @@ border: none;
 
 .btn-container{
   position: relative;
+
 }
+
 
 .button {
   background-color: #67E59A;
@@ -242,6 +259,7 @@ border: none;
 .button:hover {
   background-color: #40A2E3;
 }
+
 
 
 .column{
@@ -278,6 +296,9 @@ border: none;
   }
 
 
+  
+
+
 }
 
 @media screen and (max-width: 660px) {
@@ -303,6 +324,7 @@ border: none;
  button{
   flex: 49%;
  }
+
 
 }
 
@@ -334,6 +356,8 @@ border: none;
   .column{
     width:100%;
   }
+
+
   
 }
 
