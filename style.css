@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
  }
 
+ 
 
  #myBtn {
   display: none;
@@ -77,16 +78,7 @@ h3{
 
 }
 
-.text{
-  text-align: left;
-    font-family: serif;
-    color: #5e5f61;
-  /*  padding-top: 20px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 600px;*/
-  
-}
+
 
 .samakning{
   text-align: left;
@@ -111,20 +103,22 @@ p{
 
 }
 
-img{
-  margin:20px 50px 20px 50px;
+.logo{
+  width:160px;
+  height:120px;
   align-items: right;
   justify-content: right;
   position: relative;
+  margin: 25px 20px 60px;
   
 }
 
 
+
+
 header{
-  
-  background-image: url('https://cdn.pixabay.com/photo/2019/10/20/22/33/road-4564817_1280.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
+  background-color: #e8eef0;
   object-fit: fill;
   display: flex;
   background-size: cover;
@@ -150,16 +144,19 @@ footer{
     overflow: hidden;
     background-color: #e8eef0;
     position: absolute;
-    display: flex;
     bottom:0;
     left:0;
     width: 100%;
+    justify-content: space-between;
+    display:flex;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
     
-
-
-
+    
   
   }
+
+
 
   
   
@@ -208,10 +205,11 @@ footer{
 
 
 .pic_txt{
-padding: 0rem 5rem 0rem 5rem;
+
 background-color: none;
 border: none;
-
+color: white;
+text-align:center;
 }
 
 .btn-col{
@@ -325,6 +323,13 @@ border: none;
   flex: 49%;
  }
 
+ ul{
+  flex-wrap: wrap;
+ }
+
+ li{
+  flex:20%;
+ }
 
 }
 
@@ -419,4 +424,106 @@ border: none;
 
 
 
+  * {box-sizing: border-box}
 
+  body {
+    font-family: Verdana, sans-serif; 
+    margin:0;
+  }
+
+  .mySlides {
+    display: none;
+    justify-content: center;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+   margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+
+  }
+
+
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
+
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    
+    justify-content: center;
+   
+    
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text{font-size: 11px}
+  }

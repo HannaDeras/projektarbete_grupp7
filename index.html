@@ -7,23 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <header>
-  <img  src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=663b33e9&is=6639e269&hm=db103761c6f840ca620776943aaee67ea389b54c676dbcf368ba78e82db3093d&" alt="logo" width="200" height="160"> 
+  <img class="logo"  src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=663b33e9&is=6639e269&hm=db103761c6f840ca620776943aaee67ea389b54c676dbcf368ba78e82db3093d&" alt="logo" width="200" height="160"> 
   <nav class="nav">
     <ul class="nav-links" >
       <div class ="btn-1">
-        <li><a href="#Graf1">Ökning av personbil</a></li>
+        <li><a href="#Graf1">Antal personbilar</a></li>
       </div>
       <div class ="btn-2">
         <li><a href="#Graf2">Personbilar 2012 vs 2022</a></li>
       </div>
       <div class ="btn-3">
-        <li><a href="#Graf3">Sänkning av växthusgaser</a></li>
+        <li><a href="#Graf3">Mängden växthusgaser</a></li>
       </div>
       <div class ="btn-4">
         <li><a href="#Graf4">Växthusgaser 2012 vs 2022 </a></li>
       </div class="btn-5">
-        <li><a href="#Graf5">Antal personbilar i län</a></li>
-      </div class="btn-6">
         <li><a href="#Samåkning">Samåkning</a></li>
     </ul>
   </nav>
@@ -39,7 +37,8 @@
       Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB.
       Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.
     </div>
-    
+    <!--
+
     <div class="dp">
       <div class="bild">
         <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237697007703822336/bil_bild_2.png?ex=663c96a9&is=663b4529&hm=7b98e9869bff69bd05f92bc7f9a979c46870598f9056413ee17783b88d976874&" alt="pic1" width="500" height="500" > 
@@ -50,7 +49,8 @@
       <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__TK__TK1001__TK1001A/FordonTrafik/" class="button">Läs mer om detta dataset</a>
     </div>
     </div>
-
+  -->
+<!--
     <div class="dp">
       <div class="bild">
         <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237376101265838080/bil_bild.png?ex=663b6bcb&is=663a1a4b&hm=8e6db2a57214cb49db1556581dbd27b990463af8e35904d2cc4dfe383922ff2d&" alt="pic1" width="500" height="500" > 
@@ -62,8 +62,44 @@
       </div>
    </div>
  </div>
- 
+ -->
+ <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 2</div>
+    <img src="https://cdn.pixabay.com/photo/2016/11/18/15/58/vw-1835506_1280.jpg" style="width:100%">
+    <div class="text">
+      <h1><strong>Dataset 1</strong></h1>
+      <p class="pic_txt">Ett dataset från SCB, innehåller data om fordon i trafik efter län och komun, samt fordonsslag (2002-2023).</p>
+      
+      <div class="btn-container">
+        <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__TK__TK1001__TK1001A/FordonTrafik/" class="button">Läs mer om detta dataset</a>
+      </div>
+    </div>
+    
+  </div>
   
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 2</div>
+    <img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg" style="width:100%">
+    <div class="text">
+      <h1><strong>Dataset 2</strong></h1>
+      <p class="pic_txt"> Ett dataset från SCB, innehåller data om utsläpp av växthusgaser från inrikes transporter efter typ av växthusgas, bränsle och transportsslag (1990-2022).</p>
+      <div class="btn-container">
+        <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__TK__TK1001__TK1001A/FordonTrafik/" class="button">Läs mer om detta dataset</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  
+ 
   
 <div class="grafer">
   <div class="titel">
@@ -81,7 +117,7 @@
       </div>
     </div>
  </div>
-
+<!--
   <div class="column">
     <div id="Graf2">
      <h3> Skillnaden i antal personbilar  år 2012 och 2022</h3>
@@ -93,7 +129,7 @@
     </div>
   </div>
 </div>
-
+-->
 <div class="row">
   <div class="column">
     <div id="Graf3">
@@ -107,7 +143,7 @@
       </div> 
     </div>
   </div> 
-
+<!--
   <div class="column">
     <div id="Graf4">
     <h3>Skillnaden av växthusgasutsläpp för personbil år 2012 och 2022</h3>
@@ -117,6 +153,7 @@
      </div> 
     </div>
     </div>
+  -->
  </div> 
 </div>
 <div class="Rekomendation">

@@ -1,5 +1,3 @@
-const urlSCB = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik";
-
 
 // Knapp som tar användaren tillbaka till toppen
 let mybutton = document.getElementById("myBtn");
@@ -19,6 +17,37 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+//slideshow
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+
+}
+
+
+//Grafer
+const urlSCB = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik";
 
 //Här hämtar vi data om hur många personer i alla län mellan 2012-2022 som åkte personbil
 const querySCB = {
@@ -382,3 +411,5 @@ fetch (requestkol2)
   .then(printSCBChart4);
 
 */
+
+
