@@ -107,7 +107,7 @@ const querySCB = {
   .then(printSCBChart);
 
 
-
+/*
 //Hämtar data på hur många som åkte personbil i alla län år 2022 och 2012
 const url2022 = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik";
 
@@ -188,7 +188,7 @@ const query2022 = {
   .then(printSCBChart2);
 
 
-
+*/
 
 
 //Hämtar data på kolioxid för personbil mellan åren 2012 -2022
@@ -292,6 +292,8 @@ fetch (requestkol)
 .then(printSCBChart3);
 
 
+/*
+
 const urlkol2 ="https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/MI0107InTranspNN";
 
 const querykol2 = {
@@ -379,180 +381,4 @@ fetch (requestkol2)
   .then((response) => response.json())
   .then(printSCBChart4);
 
-
-//Hämtar olika data från ett dataset- Antalet personbilar i olika län 
-
-const urlSCB5 = 'https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik';
-
-const querySCB5 = {
-  "query": [
-    {
-      "code": "Region",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "01",
-          "03",
-          "04",
-          "05",
-          "06",
-          "07",
-          "08",
-          "09",
-          "10",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25"
-        ]
-      }
-    },
-    {
-      "code": "Fordonsslag",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "10"
-        ]
-      }
-    },
-    {
-      "code": "Tid",
-      "selection": {
-        "filter": "item",
-        "values": [
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022"
-        ]
-      }
-    }
-  ],
-  "response": {
-    "format": "JSON"
-  }
-}
-
-function printSCBChart5(dataSCB5) {
-  //kontrollera datasetet
-  console.log(dataSCB5);
-
-  //hämta alla labels - enligt scb:s format (som inte ännu passar oss)
- const labelsRaw = dataSCB5.data.map((data) => data.key[2]);
-  console.log(labelsRaw);
-  //hämta alla värden - enligt scb:s format (som inte ännu passar oss)
-  const valuesRaw = dataSCB5.data.map((data) => data.values[0]);
-  console.log(valuesRaw);
-  //göra alla labels unika
-  const labels = [...new Set(labelsRaw)];
-  console.log(labels);
-
-  
-  //delar upp värdena 
-  const dataStockholm = valuesRaw.splice(0, labels.length);
-  const dataDalarna = valuesRaw.splice(0, labels.length);
-  const dataKalmar = valuesRaw.splice(0, labels.length);
-  const dataVästraGötaland = valuesRaw.splice(0, labels.length);
-  const dataVästerbotten = valuesRaw.splice(0, labels.length);
-  const dataNorrbotten = valuesRaw;
-
-  console.log('Stockholms Län: ', dataStockholm, 'Dalarnas Län', dataDalarna, "Kalmar Län", dataKalmar,"Västra Götaland Län", dataVästraGötaland, "Västerbottens Län", dataVästerbotten, "Norrbottens Län", dataNorrbotten);
-
-
-
-
-  //1 dataset per linje eller stapel per datapunkt vid x axeln.
-  const datasets = [
-    {
-      label: 'Stockholms Län ',
-      data: dataStockholm,
-      fill: false,
-      borderWidth: 2,
-      hoverBorderWidth: 4,
-      tension: 0.5
-    },
-    {
-      label: 'Dalarnas Län',
-      data: dataDalarna,
-      fill: false,
-      borderWidth: 2,
-      hoverBorderWidth: 4,
-      tension: 0.5,
-    },
-    {
-      label: 'Kalmar Län ',
-      data: dataKalmar,
-      fill: false,
-      borderWidth: 2,
-      hoverBorderWidth: 4,
-      tension: 0.5
-    },
-
-    {
-      label: 'Västra götalands Län',
-      data: dataVästraGötaland,
-      fill: false,
-      borderWidth: 2,
-      hoverBorderWidth: 4,
-      tension: 0.5
-    },
-    {
-      label: 'Västerbottens Län ',
-      data: dataVästerbotten,
-      fill: false,
-      borderWidth: 2,
-      hoverBorderWidth: 4,
-      tension: 0.5
-    },
-    {
-      label: 'Norrbottens Län ',
-      data: dataNorrbotten,
-      fill: false,
-      borderWidth: 2,
-      hoverBorderWidth: 4,
-      tension: 0.5
-    }
-
-  ];
-
-
-  new Chart(document.getElementById('myChart5'), {
-    type: 'bar',
-    data: { labels, datasets }
-    
-    
-
-  });
-  
-  
-}
-
-
-const request5 = new Request(urlSCB5, {
-  method: 'POST',
-  body: JSON.stringify(querySCB5)
-});
-
-fetch(request5)
-  .then((response) => response.json())
-  .then(printSCBChart5);
-
-  
+*/
