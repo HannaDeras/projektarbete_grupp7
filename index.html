@@ -6,41 +6,21 @@
   <title>CarcoCheck</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<header>
-  <img class="logo"  src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=663b33e9&is=6639e269&hm=db103761c6f840ca620776943aaee67ea389b54c676dbcf368ba78e82db3093d&" alt="logo" width="200" height="160"> 
-  <nav class="nav">
-    <ul class="nav-links" >
-      <div class="nav-btn">
-      <div class ="btn-1">
-        <li><a href="#Graf1">Antal personbilar</a></li>
-      </div>
-      </div>
-      <div class="nav-btn">
-      <div class ="btn-2">
-        <li><a href="#Graf2">Personbilar 2012 vs 2022</a></li>
-      </div>
-    </div>
-    <div class="nav-btn">
-      <div class ="btn-3">
-        <li><a href="#Graf3">Mängden växthusgaser</a></li>
-      </div>
-    </div>
-    <div class="nav-btn">
-      <div class ="btn-4">
-        <li><a href="#Graf4">Växthusgaser 2012 vs 2022 </a></li>
-      </div>
-    </div>
-    <div class="nav-btn">
-      </div class="btn-5">
-        <li><a href="#Samåkning">Samåkning</a></li>
-    </div>
-  </div>
-    </div>
-    </ul>
-  </nav>
-</header>
+
 <body>
+  
+  <div class="logo" href="#home"> <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=664da8e9&is=664c5769&hm=fedeb946dcf20e71b2d51986862d42d82638cca27b5855f7cf84e0b2644ca764&" width="120px" height="100px" alt="logo">
+  </div>
  
+<div class="sidebar">
+
+    <a href="#Dataset">Datasets</a>
+    <a href="#Graf1">Antal personbilar</a>
+    <a href="#Graf2">Mängden växthusgaser</a>
+    <a href="#Samåkning">Samåkning</a>
+  </div>
+  
+  <div class="content">
     <h2>
       Dagens problem
     </h2>
@@ -50,6 +30,8 @@
       Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB.
       Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.
     </div>
+  </div>
+   
     <!--
 
     <div class="dp">
@@ -76,8 +58,10 @@
    </div>
  </div>
  -->
- <div class="slideshow-container">
 
+ 
+ <div class="slideshow-container">
+  <div id="Dataset"></div>
   <div class="mySlides fade">
     <div class="numbertext">1 / 2</div>
     <img src="https://cdn.pixabay.com/photo/2016/11/18/15/58/vw-1835506_1280.jpg" style="width:100%">
@@ -112,7 +96,7 @@
   </div>
   
   
- 
+  
   
 <div class="grafer">
   <div class="titel">
@@ -130,22 +114,10 @@
       </div>
     </div>
  </div>
-<!--
+
+
   <div class="column">
     <div id="Graf2">
-     <h3> Skillnaden i antal personbilar  år 2012 och 2022</h3>
-      <canvas id= "myChart2"> </canvas>
-      <div class="paragraf">
-       <p>Denna graf visar skillnanden i antal personbilar i Sverige år 2012 och 2022. Man kan se att år 2012 var det som man tidigare såg <strong>4 447 165</strong> stycken personbilar och år 2022 blev det en ökning till <strong>4 980 543</strong> stycken personbilar.  
-       På 11 år kan man se att antalet personbilar har ökat med <strong>533 378</strong> stycken personbilar i Sverige.</p>
-      </div>
-    </div>
-  </div>
-</div>
--->
-<div class="row">
-  <div class="column">
-    <div id="Graf3">
      <h3>Mängden växthusgasutsläpp för personbil (år 2012-2022)</h3>
       <canvas id= "myChart3"> </canvas>
       <div class="paragraf">
@@ -156,17 +128,7 @@
       </div> 
     </div>
   </div> 
-<!--
-  <div class="column">
-    <div id="Graf4">
-    <h3>Skillnaden av växthusgasutsläpp för personbil år 2012 och 2022</h3>
-     <canvas id= "myChart4"> </canvas>
-     <div class="paragraf">
-       <p>Denna graf visar skillnaden av totalmängden växthusgaser för personbilar år 2012 och år 2022. 2012 dominerar med <strong>11 456</strong> kt, medan 2022 visar <strong>8 268</strong>kt. Alltså har det blivit en relativt skarp nedsänkning av den totala mängden växthusgaser 2022 från 2012.</p>
-     </div> 
-    </div>
-    </div>
-  -->
+
  </div> 
 </div>
 <div class="Rekomendation">
@@ -186,17 +148,18 @@
     
     <a href="https://www.passenger.se/drive " class="button-redirect">Passenger</a>
   </div>
+
 </div>
 </div>
+
+
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Tillbaka till toppen</button>
-
+</div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 
-<footer>
-  <p>Grupp 7 - Saga Jusslin och Hanna Deras <br>GIK373<br></p>
-</footer>
+
 
 </html>
