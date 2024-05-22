@@ -99,7 +99,8 @@ const querySCB = {
       backgroundColor: "#e8eef0",
       hoverBorderWidth: 4,
       tension: 0.5,
-      barThickness: 20
+      barThickness: 20,
+      
       
     }];
 

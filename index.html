@@ -12,7 +12,7 @@
  
 <div class="sidebar">
 
-    <a href="#Dataset">Datasets</a>
+    <a href="#content">Datasets</a>
     <a href="#Graf1">Antal personbilar</a>
     <a href="#Graf2">Mängden växthusgaser</a>
     <a href="#Samåkning">Samåkning</a>
@@ -23,48 +23,50 @@
       <input class="logo" type="image" src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=664da8e9&is=664c5769&hm=fedeb946dcf20e71b2d51986862d42d82638cca27b5855f7cf84e0b2644ca764&" width=250px height=230 alt="logo">
       <h1>Koll på bilar och klimat - en hållbar framtid i dina händer!</h1>
     
-      <button><a href="#Dataset">Läs mer</a></button>
+      <button><a href="#content">Läs mer</a></button>
+    
     </div>
   </div>
 
   <div class="content">
+    <div id="content"></div>
     <h2>
       Dagens problem
     </h2>
-   <div class="content-dp">
+   
    <div class="intro">
     
       Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB.
       Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.
     </div>
-  </div>
+
    
     
-  <div class="content-dp">
-    <div class="dp">
-      <div class="bild">
-        <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237697007703822336/bil_bild_2.png?ex=664dba29&is=664c68a9&hm=0486511ace349994ad2c93d5e880922f642fc59f89a2b7ee3c0642fbd51a00de&" alt="pic1" width="500" height="500" > 
+    <div class="content-dp">
+      <div class="dp">
+        <div class="bild">
+          <img src="https://img.freepik.com/free-vector/flat-snow-car-illustration_23-2149845705.jpg?t=st=1716367471~exp=1716371071~hmac=274858bc65bff1123ff861a20a200800935aadc5543264860674deeafb647a1f&w=740" alt="pic1" width="250" height="250" > 
+        </div>
+        <h3>Dataset 1</h3>
+        <p class="pic_txt">Ett dataset från SCB, innehåller data om fordon i trafik efter län och komun, samt fordonsslag (2002-2023).</p>
+        <div class="btn-container">
+        <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__TK__TK1001__TK1001A/FordonTrafik/" class="button">Läs mer om detta dataset</a>
       </div>
-      <h3>Dataset 1</h3>
-      <p class="pic_txt">Ett dataset från SCB, innehåller data om fordon i trafik efter län och komun, samt fordonsslag (2002-2023).</p>
-      <div class="btn-container">
-      <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__TK__TK1001__TK1001A/FordonTrafik/" class="button">Läs mer om detta dataset</a>
-    </div>
-    </div>
+      </div>
+    
   
-
-    <div class="dp">
-      <div class="bild">
-        <img src="https://cdn.discordapp.com/attachments/1036964644193058836/1237376101265838080/bil_bild.png?ex=664de0cb&is=664c8f4b&hm=dab7123df5e2c6497df640206fffdd13f081b58a416bab51b7de539b5c8f4522&" alt="pic1" width="500" height="500" > 
-      </div>
-      <h3>Dataset 2</h3>
-      <p class="pic_txt"> Ett dataset från SCB, innehåller data om utsläpp av växthusgaser från inrikes transporter efter typ av växthusgas, bränsle och transportsslag (1990-2022).</p>
-      <div class="btn-container">
-        <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" class="button">Läs mer om detta dataset</a>
-      </div>
-   </div>
-  </div>
- </div>
+      <div class="dp">
+        <div class="bild">
+          <img src="https://img.freepik.com/free-vector/save-planet-concept-with-woman-watering-earth_23-2148524267.jpg?t=st=1716367733~exp=1716371333~hmac=498e6328e1b33c6f18205a507c2bee2426f25d5e697ca8f545c6af8fd451be69&w=740" alt="pic2" width="250" height="250" > 
+        </div>
+        <h3>Dataset 2</h3>
+        <p class="pic_txt"> Ett dataset från SCB, innehåller data om utsläpp av växthusgaser från inrikes transporter efter typ av växthusgas, bränsle och transportsslag (1990-2022).</p>
+        <div class="btn-container">
+          <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" class="button">Läs mer om detta dataset</a>
+        </div>
+     </div>
+    </div>
+ 
  
   
   
@@ -78,7 +80,7 @@
 <div class="row">
   <div class="column">
     <div id="Graf1">
-   <h3>Antalet personbilar (2012-2022)</h3>
+   
      <canvas id= "myChart"></canvas>
      <div class="paragraf">
         <p>Denna graf visar ökningen av den totala mängden personbilar i Sverige från år 2012 till år 2022. Det lägsta mängden bilar var 2012 med <strong>4 447 165</strong> och den högsta mängden bilar år 2021 med <strong>4 986 750</strong>. Med andra ord så sänktes den totala mängden personbilar igen år 2022, då det endast fanns <strong>4 980 543</strong> bilar. </p>
@@ -89,7 +91,7 @@
 
   <div class="column">
     <div id="Graf2">
-     <h3>Mängden växthusgasutsläpp för personbil (år 2012-2022)</h3>
+    
       <canvas id= "myChart3"> </canvas>
       <div class="paragraf">
         <p> Denna graf visar den totala mängden växthusgaser mellan åren 2012 och 2022, mängden av växthusgaser mäts i kiloton <strong>(kt)</strong>. Den högsta mängden växthusgaser var 2012 med <strong>11 456</strong>kt av växthusgaser. Från 2012 till 2014 går kurvan stadig nedåt men går upp igen år 2015. 
@@ -109,8 +111,10 @@
   För att minska mängden bilar i trafik är en lösning att samåka med andra. En vanlig personbil har upp till 5 platser. Detta skulle betyda att 4 bilar inte behöver sättas i trafik. Det finns flera olika tjänster där man kan hitta personer att åka med. Här nedan finns det några sådana.
 </div>
 
+
 <div class = "btn-row">
   
+    
     <a href="https://nabogo.com/sv/" class="button-redirect">Nabogo</a>
    
     
@@ -120,9 +124,16 @@
     <a href="https://www.passenger.se/drive " class="button-redirect">Passenger</a>
   </div>
 
-</div>
-</div>
+ 
 
+  
+</div>
+<div class="footer">
+  <p class="f-text">
+    <strong>Grupp 7</strong> - Saga Jusslin och Hanna Deras</p>
+</div>
+</div>
+</div>
 
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Tillbaka till toppen</button>
