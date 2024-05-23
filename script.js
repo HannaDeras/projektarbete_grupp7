@@ -1,16 +1,5 @@
-//header
-
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
-
-
 // Knapp som tar användaren tillbaka till toppen
-let mybutton = document.getElementById("myBtn");
+let mybutton = document.getElementById("btn-top");
 
 window.onscroll = function() {scrollFunction()};
 
@@ -30,10 +19,11 @@ function topFunction() {
 
 
 
-//Grafer
+//Graf - Här hämtar vi data över antalet personbilar i alla län mellan år 2012-2022 
+
 const urlSCB = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/FordonTrafik";
 
-//Här hämtar vi data om hur många personer i alla län mellan 2012-2022 som åkte personbil
+
 const querySCB = {
     "query": [
       {
@@ -125,7 +115,7 @@ const querySCB = {
 
 
 
-//Hämtar data på kolioxid för personbil mellan åren 2012 -2022
+//Graf- Hämtar data på mängden kolioxid för personbil mellan åren 2012 -2022
 
 const urlkol = "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/MI0107InTranspNN";
 
@@ -183,7 +173,7 @@ const querykol = {
   }
 }
  
-  function printSCBChart3(dataSCBkol){
+  function printSCBChart2(dataSCBkol){
     console.log(dataSCBkol)
     const years = dataSCBkol.data;
     const labels = years.map((year) => year.key[3]);
@@ -208,7 +198,7 @@ const querykol = {
       }];
   
   
-    new Chart(document.getElementById("myChart3"), {
+    new Chart(document.getElementById("myChart2"), {
       type: "bubble",
       data: {labels, datasets}
   
@@ -223,7 +213,7 @@ const requestkol = new Request (urlkol, {
 
 fetch (requestkol)
 .then((response) => response.json())
-.then(printSCBChart3);
+.then(printSCBChart2);
 
 
 
