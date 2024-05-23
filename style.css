@@ -13,7 +13,7 @@
 }
 
 .content{
-  padding:5rem 0 5rem 0;
+  padding:10px 0 0 0;
 }
 
 /* Header - Menubar */
@@ -72,6 +72,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: 10px;
  
   
 }
@@ -120,39 +121,46 @@
 
 .intro-row{
   text-align: left;
-    font-family: serif;
-    color: #5e5f61;
-    padding: 5px 20px 20px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  font-family: serif;
+  color: #5e5f61;
+  padding: 5px 20px 120px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 20px;
 }
 
 .intro-column{
   flex: 50%;
- justify-content: center;
-  padding: 20px;
-  width: 50%;
+  justify-content: center;
+  padding-right: 40px;
+  
+ 
 }
 
 .intro-text{
   padding: 0;
-  margin: 2px;
+  
 }
 
 /* Dataset */
 
+.color-block{
+  background-color: rgb(226, 234, 241);
+  padding-top: 100px;
+}
+
 .dataset-row{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
+  width:100%;
+  padding: 20px 0 120px 0;
+ 
 }
 
 .dataset-column{
-  
   flex: 50%;
- justify-content: center;
+  width:100%; 
   padding: 20px;
 }
 
@@ -167,23 +175,28 @@ img{
   border-radius: 20px;
 }
 
-.dataset-txt{
-  background-color: none;
-  border: none;
-  color: #5e5f61;
-  text-align:left;
-  width: 50%;
-  display: flex;
-  position: absolute;
+.dataset-text-container{
+  width: 100%;
   justify-content: center;
-  margin: 0;
   padding: 0;
   
 }
 
+.dataset-txt{
+
+border: none;
+color: #5e5f61;
+text-align:left;
+  
+}
+
 .btn-container{
+  flex-direction: column;
+  flex: 100%;
+  max-width: 100%;
   position: relative;
- 
+  padding: 20px;
+  padding: 10px 0 80px 0;
   
 }
 
@@ -213,6 +226,7 @@ img{
   display: flex;
   flex-wrap: wrap;
   width:100%;
+  padding: 0 0 100px 0;
   
 }
 
@@ -223,32 +237,47 @@ img{
 
 /* Tip - Carpool */
 
+.tip-row{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+}
+
+.tip-column{
+  flex: 50%;
+  width:100%; 
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
 .carpool-txt{
   text-align: left;
     font-family: serif;
     color: #5e5f61;
     padding: 20px;
-    width: 50%; 
+    font-size: 20px;
 }
 
 .carpool-btn-container{
   display:flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  
+  flex-direction: column;
+  column-gap: 50px;
 }
 
 .btn-redirect{
   background-color: #67E59A;
   border: none;
   color: #FFF6E9;
- padding: 10px;
+ padding: 30px;
   border-radius: 1rem;
- justify-content: space-between;
- border-radius: 2rem;
- height: 40px;
- width: 100px;
+ border-radius: 4rem;
+ height: 80px;
+ width: 200px;
  text-align: center;
- margin: 20px;
+ margin: 5px;
 }
 
 .btn-redirect:hover {
@@ -302,15 +331,17 @@ h1{
   text-align: left;
   font-family: sans-serif;
   color: #67E59A;
-  padding: 0px 20px 0 20px;
-  margin: 30px 0 0 0;
+  padding: 10px 22px 0 20px;
+  margin: 0;
+ 
 }
 
 h2{
     text-align: left;
     font-family: sans-serif;
     color: #67E59A;
-    padding: 0px 20px 0 20px;
+    padding: 0px 22px 0 20px;
+   
    
 }
 
@@ -322,10 +353,11 @@ h3{
 }
 
 p{
-  padding: 0 20px 0 20px ;
+ padding: 20 0px 0 0px ;
   text-align: left;
   font-family: serif;
   color: #5e5f61;
+  font-size: 20px;
   }
 
 a {
@@ -362,11 +394,15 @@ a {
 
 @media screen and (min-width: 750px) {
   .charts-column{
-    flex: 40%;
+    flex: 50%;
     padding: 20px;
     max-width: 50%;
   }
 
+  .tip-column{
+    flex: 50%;
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -394,6 +430,10 @@ a {
    
   }
  
+  .tip-column{
+    flex: 50%;
+    max-width: 100%;
+  }
 }
 
 
@@ -429,6 +469,13 @@ a {
 
   .charts-column{
     width:100%;
+  }
+
+  .tip-row{
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+    align-content: center;
   }
   
 }
