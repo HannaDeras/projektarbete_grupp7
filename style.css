@@ -13,7 +13,7 @@
 }
 
 .content{
-  padding:10px 0 0 0;
+  padding:0px 0 0 0;
 }
 
 /* Header - Menubar */
@@ -123,7 +123,7 @@
   text-align: left;
   font-family: serif;
   color: #5e5f61;
-  padding: 5px 20px 120px 20px;
+  padding: 0px 20px 30px 22px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -139,7 +139,7 @@
 }
 
 .intro-text{
-  padding: 0;
+  padding: 20px 0 10px 0;
   
 }
 
@@ -154,14 +154,14 @@
   display: flex;
   flex-wrap: wrap;
   width:100%;
-  padding: 20px 0 120px 0;
+  padding: 20px 0 100px 0;
  
 }
 
 .dataset-column{
   flex: 50%;
   width:100%; 
-  padding: 20px;
+  padding: 0 0 20px 22px;
 }
 
 img{
@@ -226,13 +226,18 @@ text-align:left;
   display: flex;
   flex-wrap: wrap;
   width:100%;
-  padding: 0 0 100px 0;
+  padding: 0 0 60px 0;
   
 }
 
 .charts-column{
   flex: 50%;
   width:100%; 
+}
+
+.titel{
+  padding: 0 20px 0 22px;
+
 }
 
 /* Tip - Carpool */
@@ -255,7 +260,7 @@ text-align:left;
   text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding: 20px;
+    padding: 0 0 0 22px;
     font-size: 20px;
 }
 
@@ -284,6 +289,14 @@ text-align:left;
   background-color: #40A2E3;
 
 }
+
+.tip-text{
+
+  padding: 0 20px 15px 22px;
+  
+}
+
+
 
 /* Footer */
 
@@ -331,19 +344,23 @@ h1{
   text-align: left;
   font-family: sans-serif;
   color: #67E59A;
-  padding: 10px 22px 0 20px;
+  padding: 70px 0px 0 22px;
   margin: 0;
  
 }
+
+
 
 h2{
     text-align: left;
     font-family: sans-serif;
     color: #67E59A;
-    padding: 0px 22px 0 20px;
+    margin:0;
    
    
 }
+
+
 
 h3{
   text-align: center;
@@ -395,7 +412,7 @@ a {
 @media screen and (min-width: 750px) {
   .charts-column{
     flex: 50%;
-    padding: 20px;
+    padding: 22px;
     max-width: 50%;
   }
 
