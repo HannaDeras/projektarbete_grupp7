@@ -25,7 +25,7 @@
     
     
     <div class="hero-text" >
-      <input class="logo" type="image" src="https://cdn.discordapp.com/attachments/1036964644193058836/1237316096072093707/carco_logga.png?ex=664da8e9&is=664c5769&hm=fedeb946dcf20e71b2d51986862d42d82638cca27b5855f7cf84e0b2644ca764&" width=250px height=230 alt="logo">
+      <input class="logo" type="image" src= "https://indd.adobe.com/content/2/5fd07260-a5de-41c1-a285-4de1ec709fb4/1716800017500/package/1/publication-web-resources/image/carco_logga.png" width=250px height=230 alt="logo">
       <h1 class="slogan">Koll på bilar och klimat - en hållbar framtid i dina händer!</h1>
     
       <button class="hero-button"><a href="#dataset">Läs mer</a></button>
@@ -39,7 +39,7 @@
   <div class="content">
     <div id="dataset"></div>
     
-    <h1>Dagens Problem</h1>
+    
    <div class="intro-row">
     
     <div class="intro-column">
@@ -47,18 +47,18 @@
       <h2 class="intro-text">
        Vårt mål
       </h2>
-      Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB.
-      Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.
+      <p>Vi har valt att undersöka trender i antal personbilar och koldioxidutsläpp från 2012 till 2022. Dataset som använts är hämtade från SCB.
+      Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.</p>
     </div>
 
     <div class="intro-column">
       <h2 class="intro-text">
         Vad är växthusgaser?
       </h2>
-      Jordens klimat regleras av atmosfären som finns runt jorden. Atmosfären består naturligt av olika gaser som vi idag kallar för <strong>växthusgaser.</strong> Växthusgaserna absorverar värmestrålning från solen och gör jorden varmare, detta är nödvändigt för att någonting ska kunna leva på jorden.
+      <p>Jordens klimat regleras av atmosfären som finns runt jorden. Atmosfären består naturligt av olika gaser som vi idag kallar för <strong>växthusgaser.</strong> Växthusgaserna absorverar värmestrålning från solen och gör jorden varmare, detta är nödvändigt för att någonting ska kunna leva på jorden.
       Naturliga utsläpp av växthusgaser kommer exempelvis från vulkan utbrott, men idag står människan för en stor del av de växthusgaser som släpps ut, bland annat våra bilar.
       Majoriteten av alla bilar som finns idag har förbränningsmototrer, vilket innebär att de ger utsläpp av växthusgaser när motorn förbränner fossila brännslen. Eftersom vi är många
-      människor på jorden, och har många bilar så blir gaserna i atmosfären snabbt tjocka, och värmen på jorden höjs kraftigt.
+      människor på jorden, och har många bilar så blir gaserna i atmosfären snabbt tjocka, och värmen på jorden höjs kraftigt.</p>
     </div>
 
    </div>
@@ -66,7 +66,7 @@
    
    <!--Dataset-->
    
-   <h1>Dataset</h1>
+   <h2 class="dataset-title">Dataset</h2>
     <div class="dataset-row">
       <div class="dataset-column">
         <div class="dataset-pic">
@@ -74,7 +74,8 @@
         </div>
         <h3>Dataset 1</h3>
         <div class="dataset-text-container">
-        <p class="dataset-txt">Ett dataset från SCB, innehåller data om fordon i trafik efter län och komun, samt fordonsslag (2002-2023).</p>
+        <p class="dataset-txt"> Här ifrån har vi hämtat data om personbilar. Datasetet är ifrån SCB och behandlar data om fordon i trafik efter län och komun, samt fordonsslag. Datan är ifrån 2002–2023.
+         </p>
        </div>
         <div class="btn-container">
         <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__TK__TK1001__TK1001A/FordonTrafik/" class="button">Läs mer om detta dataset</a>
@@ -88,7 +89,8 @@
         </div>
         <h3>Dataset 2</h3>
         <div class="dataset-text-container">
-        <p class="dataset-txt"> Ett dataset från SCB, innehåller data om utsläpp av växthusgaser från inrikes transporter efter typ av växthusgas, bränsle och transportsslag (1990-2022).</p>
+        <p class="dataset-txt"> Här ifrån har vi hämtat data om mängden växthusgaser. Datasetet är ifrån SCB och behandlar data om utsläpp från inrikes transporter, samt typ av gas, bränsle och fordon. Datan är ifrån 1990–2022.
+         </p>
       </div>
         <div class="btn-container">
           <a href="https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/START__MI__MI0107/MI0107InTranspNN/" class="button">Läs mer om detta dataset</a>
@@ -101,16 +103,17 @@
     <!--Charts-->
     
     <div class="charts">
-      <div class="titel">
-      <h2>Trender i antal personbilar och koldioxidutsläpp: <br> En analys av åren 2012-2022</h2>
-    </div>
+     
   
   
     <div class="charts-row">
      <div class="charts-column">
       <div id="chart1">
-      
+        <div class="titel">
+          <h2 class="chart-title">Trenden i antal personbilar - 2012–2022</h2>
+        </div>
        <canvas id= "myChart"></canvas>
+       
       <div class="chart-txt">
          <p>Denna graf visar ökningen av den totala mängden personbilar i Sverige från år 2012 till år 2022. Det lägsta mängden bilar var 2012 med <strong>4 447 165</strong> och den högsta mängden bilar år 2021 med <strong>4 986 750</strong>. Med andra ord så sänktes den totala mängden personbilar igen år 2022, då det endast fanns <strong>4 980 543</strong> bilar. </p>
        </div>
@@ -120,7 +123,9 @@
 
     <div class="charts-column">
       <div id="chart2">
-    
+        <div class="titel">
+          <h2 class="chart-title">Trenden i mängden koldioxidutsläpp - 2012–2022</h2>
+        </div>
       <canvas id= "myChart2"> </canvas>
       <div class="chart-txt">
         <p> Denna graf visar den totala mängden växthusgaser mellan åren 2012 och 2022, mängden av växthusgaser mäts i kiloton <strong>(kt)</strong>. Den högsta mängden växthusgaser var 2012 med <strong>11 456</strong>kt av växthusgaser. Från 2012 till 2014 går kurvan stadig nedåt men går upp igen år 2015. 
@@ -137,7 +142,7 @@
 <!--Tip-->
 <div class="color-block"> 
 <div class="tip-text">
-<h2>Vill du hjälpa till med att minska mängden <br> växthusgaser?</h2>
+<h2 class="tip-title">Vill du hjälpa till med att minska mängden växthusgaser?</h2>
 </div>
 <div class="tip-row">
   <div id="carpool"></div>

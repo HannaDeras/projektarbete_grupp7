@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #40A2E3;
+  background-color: #82bee4;
   position: relative;
   height: 100%;
   overflow: auto;
@@ -32,7 +32,7 @@
 .menubar a {
   display: block;
   color: #FFF6E9;
-  padding: 22px;
+  padding: 32px;
   text-decoration: none;
   
  
@@ -47,7 +47,7 @@
 }
 
 .menubar a:hover:not(.active) {
-  background-color: #67E59A;
+  background-color: #7cc18f;
   color: #FFF6E9;
 }
 
@@ -93,7 +93,7 @@
   text-align: center;
   display: inline-block;
   outline: 0;
-  background-color: #40A2E3;
+  background-color: #82bee4;
   cursor: pointer;
   padding: 10px  25px;
   border-radius: 2rem;
@@ -103,7 +103,7 @@
 
 
 .hero-text button:hover {
-  background-color: #67E59A;
+  background-color: #7cc18f;
 }
 
 
@@ -123,24 +123,24 @@
   text-align: left;
   font-family: serif;
   color: #5e5f61;
-  padding: 0px 20px 30px 22px;
+  padding: 0px 20px 30px 32px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 .intro-column{
   flex: 50%;
   justify-content: center;
   padding-right: 40px;
-  padding-bottom: 20px;
+  
   
  
 }
 
 .intro-text{
-  padding: 20px 0 10px 0;
+  padding: 80px 0 15px 0;
   
 }
 
@@ -148,7 +148,11 @@
 
 .color-block{
   background-color: rgb(226, 234, 241);
-  padding-top: 100px;
+  padding-top: 80px;
+}
+
+.dataset-title{
+  padding-left: 32px;
 }
 
 .dataset-row{
@@ -162,7 +166,8 @@
 .dataset-column{
   flex: 50%;
   width:100%; 
-  padding: 0 0 20px 22px;
+  padding: 0 0 20px 32px;
+
 }
 
 img{
@@ -178,8 +183,8 @@ img{
 
 .dataset-text-container{
   width: 100%;
-  justify-content: center;
   padding: 0;
+
   
 }
 
@@ -188,6 +193,9 @@ img{
 border: none;
 color: #5e5f61;
 text-align:left;
+display: flex;
+justify-content: center;
+align-items: center;
   
 }
 
@@ -202,7 +210,7 @@ text-align:left;
 }
 
 .button {
-  background-color: #67E59A;
+  background-color: #7cc18f;
   border: none;
   color: #FFF6E9;
   padding: 20px;
@@ -218,7 +226,7 @@ text-align:left;
 }
 
 .button:hover {
-  background-color: #40A2E3;
+  background-color: #82bee4;
 }
 
 /* Charts */
@@ -227,19 +235,20 @@ text-align:left;
   display: flex;
   flex-wrap: wrap;
   width:100%;
-  padding: 0 0 60px 22px;
+  padding: 0 0px 60px 10px;
   
 }
 
 .charts-column{
   flex: 50%;
   width:100%; 
-  padding-bottom: 2px;
+  padding-bottom: 40px;
+  
 }
 
-.titel{
-  padding: 0 20px 0 22px;
-
+.chart-title{
+  padding: 0;
+  padding-bottom: 15px;
 }
 
 /* Tip - Carpool */
@@ -263,7 +272,7 @@ text-align:left;
   text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding: 0 0 0 22px;
+    padding: 0 0 0 32px;
     font-size: 20px;
 }
 
@@ -277,7 +286,7 @@ text-align:left;
 }
 
 .btn-redirect{
-  background-color: #67E59A;
+  background-color: #7cc18f;
   border: none;
   color: #FFF6E9;
  padding: 30px;
@@ -294,23 +303,24 @@ text-align:left;
 }
 
 .btn-redirect:hover {
-  background-color: #40A2E3;
+  background-color: #5099c7;
 
 }
 
-.tip-text{
 
-  padding: 0 20px 15px 22px;
-  
+
+.tip-title{
+  padding-left: 32px;
+  padding-bottom: 15px;
+  padding-right: 20px;
 }
-
-
 
 /* Footer */
 
 .footer{
+  display: flex;
   justify-content: center;
-  background-color: #40A2E3;
+  background-color: #82bee4;
   width: 100%;
   height: 100px;
   padding-top: 20px;
@@ -320,6 +330,7 @@ text-align:left;
   color:#FFF6E9;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /*Top button*/
@@ -333,7 +344,7 @@ text-align:left;
   font-size: medium;
   border: none;
   outline: none;
-  background-color: #40A2E3;
+  background-color: #82bee4;
   color: #FFF6E9;
   cursor: pointer;
   padding: 15px;
@@ -342,7 +353,7 @@ text-align:left;
 }
 
 #btn-top:hover {
-  background-color: #67E59A;
+  background-color: #7cc18f;
 }
 
 
@@ -351,7 +362,7 @@ text-align:left;
 h1{
   text-align: left;
   font-family: sans-serif;
-  color: #67E59A;
+  color: #7cc18f;
   padding: 70px 0px 0 22px;
   margin: 0;
  
@@ -362,8 +373,10 @@ h1{
 h2{
     text-align: left;
     font-family: sans-serif;
-    color: #67E59A;
+    color: #7cc18f;
     margin:0;
+    padding-left: 32px;
+   
    
    
 }
@@ -373,12 +386,12 @@ h2{
 h3{
   text-align: center;
     font-family: sans-serif;
-    color: #40A2E3;
+    color: #82bee4;
    
 }
 
 p{
- padding: 20 0px 0 0px ;
+ margin: 0;
   text-align: left;
   font-family: serif;
   color: #5e5f61;

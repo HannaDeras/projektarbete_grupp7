@@ -81,7 +81,7 @@ const querySCB = {
 
   const datasets = [
     {
-      label: "Antal personbilar",
+      label: "",
       data,
       fill: false,
       borderWidth: 2,
@@ -90,15 +90,28 @@ const querySCB = {
       hoverBorderWidth: 4,
       tension: 0.5,
       barThickness: 20,
-      
-      
-    }];
+     
+   }];
 
 
   new Chart(document.getElementById("myChart"), {
     type: "bar",
-    data: {labels, datasets}
-
+    data: {labels, datasets},
+    options: {
+      plugins: {
+        legend: {
+            display: false,
+          
+        }
+      },
+      scales: {
+        y: {
+            beginAtZero: true,
+            min: 4000000,
+            max: 5000000
+        }
+    }
+    }
   });
 }
 
@@ -185,23 +198,33 @@ const querykol = {
 
     const datasets = [
       {
-        label: "Totala mängden växthusgas",
+        label: "",
         data,
         fill: false,
         borderWidth: 2,
-        borderColor: ["#40A2E3", "#67E59A"],
-        backgroundColor: "#e8eef0",
+        borderColor: ["#7cc18f"],
+        backgroundColor: ["#e8eef0"],
         hoverBorderWidth: 4,
         tension: 0.5,
         radius: 5
-        
-      }];
+      }
+    
+     
+
+    ];
   
   
     new Chart(document.getElementById("myChart2"), {
       type: "bubble",
-      data: {labels, datasets}
-  
+      data: {labels, datasets},
+      options: {
+        plugins: {
+          legend: {
+              display: false,
+            
+          }
+        }
+      }
     });
   }
 
