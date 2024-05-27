@@ -55,7 +55,7 @@
 /* Hero image */
 
 .hero-image {
-  background-image:url("https://cdn.pixabay.com/photo/2021/09/07/11/53/car-6603726_1280.jpg");
+  background-image:url("https://cdn.pixabay.com/photo/2022/06/03/17/21/mountains-7240579_1280.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -112,7 +112,6 @@
     font-family: sans-serif;
     color: #FFF6E9;
     padding: 0px 20px 0 20px;
-    text-shadow: 2px 3px #5e5f61;
     padding-bottom: 25px;
 }
 
