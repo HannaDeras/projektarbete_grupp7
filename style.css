@@ -122,7 +122,6 @@
   text-align: left;
   font-family: serif;
   color: #5e5f61;
-  padding: 0px 20px 30px 32px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -131,8 +130,9 @@
 
 .intro-column{
   flex: 50%;
+  width: 100%;
   justify-content: center;
-  padding-right: 40px;
+  padding: 0 32px 40px 32px;
   
   
  
@@ -165,7 +165,7 @@
 .dataset-column{
   flex: 50%;
   width:100%; 
-  padding: 0 0 20px 32px;
+  padding: 0 32px 40px 32px;
 
 }
 
@@ -221,7 +221,7 @@ align-items: center;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2rem;
-  
+  width: 50%;
 }
 
 .button:hover {
@@ -234,20 +234,24 @@ align-items: center;
   display: flex;
   flex-wrap: wrap;
   width:100%;
-  padding: 0 0px 60px 10px;
+  padding: 0 0px 60px 0px;
   
 }
 
 .charts-column{
   flex: 50%;
   width:100%; 
-  padding-bottom: 40px;
-  
+  padding: 0 32px 40px 32px;
 }
 
 .chart-title{
   padding: 0;
   padding-bottom: 15px;
+
+}
+
+.chart-txt{
+  padding-top: 15px;
 }
 
 /* Tip - Carpool */
@@ -262,26 +266,27 @@ align-items: center;
   flex: 50%;
   width:100%; 
   display: flex;
-  justify-content: center;
+  
   /*align-items: center;*/
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .carpool-txt{
   text-align: left;
     font-family: serif;
     color: #5e5f61;
-    padding: 0 0 0 32px;
+    padding: 0 32px 0 32px;
     font-size: 20px;
+    
 }
 
 .carpool-btn-container{
   display:flex;
-  justify-content: right;
-  flex-direction: column;
-  column-gap: 50px;
-  
-  
+  justify-content: left;
+  flex-direction: row;
+  column-gap: 10px;
+  padding: 20px 0 40px 12px;
+ 
 }
 
 .btn-redirect{
@@ -302,7 +307,7 @@ align-items: center;
 }
 
 .btn-redirect:hover {
-  background-color: #5099c7;
+  background-color:  #82bee4;
 
 }
 
@@ -312,6 +317,8 @@ align-items: center;
   padding-left: 32px;
   padding-bottom: 15px;
   padding-right: 20px;
+  
+  
 }
 
 /* Footer */
@@ -416,8 +423,13 @@ a {
     height: auto;
     position: relative;
   }
-  .menubar a {float: left;}
-  div.content {margin-left: 0;}
+  .menubar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -430,9 +442,18 @@ a {
 /*Media queries - Other*/
 
 @media screen and (min-width: 750px) {
+
+
   .charts-column{
     flex: 50%;
-    padding: 32px;
+    padding: 0 32px 0 32px;
+    max-width: 50%;
+  }
+
+
+  .dataset-column{
+    flex: 50%;
+    padding: 0 32px 0 32px;
     max-width: 50%;
   }
 
@@ -440,9 +461,41 @@ a {
     flex: 50%;
     max-width: 100%;
   }
+  
+  .carpool-btn-container{
+    display:flex;
+    justify-content: left;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 100%;
+    
+  }
+
+
+  .tip-title{
+    width: 50%;
+  }
+
+  .carpool-txt{
+    text-align: left;
+      font-family: serif;
+      color: #5e5f61;
+      padding: 0 32px 0 32px;
+      font-size: 20px;
+      width: 50%;
+  }
+  
+ 
 }
 
 @media screen and (max-width: 660px) {
+
+  .intro-row{
+    flex-direction: column;
+    flex: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
   
   .intro-column{
     flex:50%;
@@ -464,13 +517,44 @@ a {
 
   .charts-column{
     flex: 50%;
-   
+    max-width: 100%;
+  }
+
+  .tip-title{
+    width: 100%;
+  }
+
+  .carpool-txt{
+    text-align: left;
+      font-family: serif;
+      color: #5e5f61;
+      padding: 0 32px 0 32px;
+      font-size: 20px;
+      width: 100%;
+  }
+
+  .carpool-btn-container{
+    display:flex;
+    justify-content: left;
+    flex-direction: column;
+    column-gap: 10px;
+    width: 100%;
+    
   }
  
   .tip-column{
     flex: 50%;
     max-width: 100%;
   }
+
+  .button{
+    width: 90%;
+  }
+
+  .btn-redirect{
+    width: 90%;
+  }
+
 }
 
 
@@ -502,10 +586,19 @@ a {
     flex: 100%;
     max-width: 100%;
     align-content: center;
+    
   }
 
   .charts-column{
     width:100%;
+  }
+
+  .dataset-column{
+    width: 100%;
+  }
+
+  .intro-column{
+    width: 100%;
   }
 
   .tip-row{
@@ -515,6 +608,24 @@ a {
     align-content: center;
   }
   
+  .carpool-btn-container{
+    display:flex;
+    justify-content: left;
+    flex-direction: column;
+    column-gap: 10px;
+    width: 100%;
+    
+  }
+
+  .btn-redirect{
+    width: 90%;
+  }
+
+  .button{
+    width: 90%;
+  }
+
+
 }
 
 

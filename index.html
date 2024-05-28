@@ -1,3 +1,7 @@
+
+ <!-- Saga Jusslin h22sagju@du.se-->
+ <!-- Hanna Deras h22hdera@du.se-->
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -13,7 +17,7 @@
 
 <div class="menubar">
 
-    <a href="#dataset">Datasets</a>
+    <a href="#dataset">Dataset</a>
     <a href="#chart1">Antal personbilar</a>
     <a href="#chart2">Mängden växthusgaser</a>
     <a href="#carpool">Samåkning</a>
@@ -45,10 +49,10 @@
     <div class="intro-column">
       
       <h2 class="intro-text">
-       Vårt mål
+       Valt ämne
       </h2>
-      <p>Vi har valt att undersöka antalet personbilar som var i bruk i Sverige mellan åren 2012–2022 och mängden växthusgaser som släpptes ut mellan åren 2012–2022. Detta har vi gjort för att se om det finns någon trend i antalet personbilar och mängden utsläpp av växthusgaser. De dataset som har använts är hämtade från SCB.
-      Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.</p>
+      <p>Vi har valt att undersöka antalet personbilar som var i bruk i Sverige mellan åren 2012–2022 och mängden växthusgaser som släpptes ut mellan åren 2012–2022. Detta har vi gjort för att se om det finns någon trend i antalet personbilar och mängden utsläpp av växthusgaser. De dataset som har använts är hämtade från SCB.</p> 
+     <p> Bilar som använder förbränningsmotorer, särskilt de som drivs av bensin eller diesel, kan släppa ut betydande mängder växthusgaser, såsom koldioxid (CO2), kväveoxid (NOx) och metan (CH4). Dessa utsläpp bidrar till den globala uppvärmningen och klimatförändringarna.</p>
     </div>
 
     <div class="intro-column">
@@ -56,8 +60,8 @@
         Vad är växthusgaser?
       </h2>
       <p>Jordens klimat regleras av atmosfären som finns runt jorden. Atmosfären består naturligt av olika gaser som vi idag kallar för <strong>växthusgaser.</strong> Växthusgaserna absorverar värmestrålning från solen och gör jorden varmare, detta är nödvändigt för att någonting ska kunna leva på jorden.
-      Naturliga utsläpp av växthusgaser kommer exempelvis från vulkan utbrott, men idag står människan för en stor del av de växthusgaser som släpps ut, bland annat våra bilar.
-      Majoriteten av alla bilar som finns idag har förbränningsmototrer, vilket innebär att de ger utsläpp av växthusgaser när motorn förbränner fossila brännslen. Eftersom vi är många
+      Naturliga utsläpp av växthusgaser kommer exempelvis från vulkan utbrott, men idag står människan för en stor del av de växthusgaser som släpps ut, bland annat våra bilar.</p>
+      <p>Majoriteten av alla bilar som finns idag har förbränningsmotorer, vilket innebär att de ger utsläpp av växthusgaser när motorn förbränner fossila bränslen. Eftersom vi är många
       människor på jorden, och har många bilar så blir gaserna i atmosfären snabbt tjocka, och värmen på jorden höjs kraftigt.</p>
     </div>
 
@@ -74,7 +78,7 @@
         </div>
         <h3>Dataset 1</h3>
         <div class="dataset-text-container">
-        <p class="dataset-txt"> Här ifrån har vi hämtat data om personbilar. Datasetet är ifrån SCB och behandlar data om fordon i trafik efter län och komun, samt fordonsslag. Datan är ifrån 2002–2023.
+        <p class="dataset-txt"> Här ifrån har vi hämtat data om antalet personbilar. Datasetet är ifrån SCB och behandlar data om fordon i trafik i sverige efter län och komun, samt fordonsslag. <br> (2002–2023)
          </p>
        </div>
         <div class="btn-container">
@@ -89,7 +93,7 @@
         </div>
         <h3>Dataset 2</h3>
         <div class="dataset-text-container">
-        <p class="dataset-txt"> Här ifrån har vi hämtat data om mängden växthusgaser. Datasetet är ifrån SCB och behandlar data om utsläpp från inrikes transporter, samt typ av gas, bränsle och fordon. Datan är ifrån 1990–2022.
+        <p class="dataset-txt"> Här ifrån har vi hämtat data om mängden växthusgaser. Datasetet är ifrån SCB och behandlar data om utsläpp från inrikes transporter, samt gas, fordon och bränsle. <br>(1990–2022)
          </p>
       </div>
         <div class="btn-container">
@@ -115,7 +119,8 @@
        <canvas id= "myChart"></canvas>
        
       <div class="chart-txt">
-         <p>Denna graf visar ökningen av den totala mängden personbilar i Sverige från år 2012 till år 2022. Det lägsta mängden bilar var 2012 med <strong>4 447 165</strong> och den högsta mängden bilar år 2021 med <strong>4 986 750</strong>. Med andra ord så sänktes den totala mängden personbilar igen år 2022, då det endast fanns <strong>4 980 543</strong> bilar. </p>
+         <p> Som vi kan se så går grafen stadigt uppåt i antalet personbilar. Troligtvis beror detta på att det blir allt fler personer i sverige. Samtidigt minskar antalet personbilar i trafiken väldigt milt 2022. Från skillnad från 2012 till 2017, där antalet bilar ökar ganska jämt för varje år, så ökar antalet bilar i trafik mindre i utsräckning från 2017 till 2022. 
+          Anledningarna bakom detta kan vara många, men några möjlig orsaker kan vara att folk började bli mer klimatmedvetna och to annat färdmedel till jobb och skola ect. Eller pågrund av ekonomiska skäl, folk hade inte längre råd att köpa flera bilar. </p>
        </div>
      </div>
    </div>
@@ -128,10 +133,8 @@
         </div>
       <canvas id= "myChart2"> </canvas>
       <div class="chart-txt">
-        <p> Denna graf visar den totala mängden växthusgaser mellan åren 2012 och 2022, mängden av växthusgaser mäts i kiloton <strong>(kt)</strong>. Den högsta mängden växthusgaser var 2012 med <strong>11 456</strong>kt av växthusgaser. Från 2012 till 2014 går kurvan stadig nedåt men går upp igen år 2015. 
-          Efter 2015 går mängden åter igen ned åt och vid 2022 är den totala mängden av växthusgaser nere på <strong>8 268</strong> kt.                             
-          
-          Troligtvist beror denna sänkning på att vi har blivit mer miljömedvetna och har utifrån miljömedvetenheten utvecklat bättre bilar som släpper ut mindre växthusgaser. </p>
+        <p> Som vi kan se gå går grafen relativt stadig nedåt. Mängden av växthusgaser mäts i kiloton <strong>(kt)</strong>.                            
+          Troligtvist beror denna sänkning på att vi har blivit mer miljömedvetna och har utifrån miljömedvetenheten utvecklat bättre bilar som släpper ut mindre växthusgaser. Mellan åren 2019 till 2020 är det en ganska krafig sänkning, vilket skulle kunna bero på covid-pandemin, vilket i sin tur orsakde att många människor stannade hemma och inte längre åkte lika mycket bil.  </p>
       </div> 
     </div>
    </div> 
@@ -142,33 +145,33 @@
 <!--Tip-->
 <div class="color-block"> 
 <div class="tip-text">
-<h2 class="tip-title">Vill du hjälpa till med att minska mängden växthusgaser?</h2>
+
 </div>
+<h2 class="tip-title">Vill du hjälpa till med att minska mängden växthusgaser?</h2>
 <div class="tip-row">
   <div id="carpool"></div>
-
 <div class="tip-column">
 <div class="carpool-txt">
-  För att minska mängden bilar i trafik är en lösning att samåka med andra. En vanlig personbil har upp till 5 platser. Detta skulle betyda att 4 bilar inte behöver sättas i trafik. Det finns flera olika tjänster där man kan hitta personer att åka med. Här nedan finns det några sådana.
+  För att minska antal bilar i trafik är en lösning att samåka med andra. En vanlig personbil har upp till 5 platser. Detta skulle betyda att 4 bilar inte behöver sättas i trafik. Det finns flera olika tjänster där man kan hitta personer att åka med. Här nedan finns det några sådana.
 </div>
 </div>
 
-<div class="tip-column">
+
+
+</div>
 <div class = "carpool-btn-container">
   
     
-    <a href="https://nabogo.com/sv/" class="btn-redirect">Nabogo</a>
-  
-    
-    <a href="https://coride.se/" class="btn-redirect">Coride</a>
-    
-    
-    <a href="https://www.passenger.se/drive " class="btn-redirect">Passenger</a>
-  </div>
+  <a href="https://nabogo.com/sv/" class="btn-redirect">Nabogo</a>
 
+  
+  <a href="https://coride.se/" class="btn-redirect">Coride</a>
+  
+  
+  <a href="https://www.passenger.se/drive " class="btn-redirect">Passenger</a>
 </div>
 </div>
-</div>
+
   
 <!--Footer-->
 <div class="footer">
